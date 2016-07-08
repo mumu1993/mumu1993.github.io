@@ -5,7 +5,7 @@
   border: 10px solid transparent;
   border-bottom: 10px solid black;
   position: relative;
-  margin: 0px auto;
+  margin: 0 auto;
   display: block;
   -webkit-transition: all linear 0.3s;
   -moz-transition: all linear 0.3s;
@@ -22,9 +22,32 @@
   transform: rotateZ(180deg); }
 
 #css_circle {
-  background: url(../../img/skills/css.png); }
+  background: url("../../img/skills/css.png"); }
 
 #js_circle {
-  background: url(../../img/skills/js.png); }
+  background: url("../../img/skills/js.png"); }
+
+.contact-me {
+  text-align: center; }
+  .contact-me p {
+    color: white;
+    line-height: 26px;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Lato', sans-serif; }
+  .contact-me .highlight {
+    color: red;
+    font-size: 24px;
+    line-height: 30px; }
+  .contact-me .highlight1 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold; }
+
+.links {
+  text-align: center; }
+  .links a {
+    font-size: 12px;
+    color: #666; }
 
 /*# sourceMappingURL=mumu.css.map */

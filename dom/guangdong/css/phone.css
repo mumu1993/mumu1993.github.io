@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html,.page{
+    width: 100%;
+    height: 100%;
+}
+li{
+    list-style-type: none;
+}
+.bg{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.head{
+    width: 100%;
+    margin: 0 auto;
+    height: 25%;
+    
+}
+.logo1{
+    position: absolute;
+    width: 17.75%;
+    height: 5.001%;
+    top: 6.75%;
+    left: 10%;
+   
+}
+.logo2{
+    position: absolute;
+    width: 35.25%;
+    height: 3%;
+    top: 12.71%;
+    left: 10%;
+    display: block;
+   
+}
+.content{
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    left: 10%;
+    top: 19.25%;
+    
+}
+.shake1{
+    width: 61.51%;
+  	height: 33.3333%;
+    float: left;
+    overflow: hidden;
+    margin: 0.25%;
+    box-shadow: inset 0px 0px 10px white;
+}
+.shake2{
+    width: 35.7%;
+	height: 33.3333%;
+    float: left;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px white;
+    margin: 0.25%;
+    
+}
+.shake3{
+    width: 61.51%;
+	height: 33.3333%;
+    float: left;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px white;
+    margin: 0.25%;
+}
+.left{
+    width: 100%;
+    height: 49.5%;
+    float: left;
+    overflow: hidden;
+}
+.right{
+    width: 100%;
+    height: 49.5%;
+    float: left;
+    overflow: hidden;
+}
+img{
+    vertical-align: top;
+    border: none;
+    overflow: hidden;
+}
+.content img{
+    width: 100%;
+    height: 100%;
+   
+}
+.footer{
+    width: 78%;
+    overflow: hidden;
+    position: absolute;
+    left: 10%;
+    bottom: 2%;
+
+}
+.footer img{
+    width: 100%;
+    position: relative;
+}
+.text{
+    position: absolute;
+    margin: auto;
+    height: 20%;
+    text-align: center;
+    color: white;
+    bottom: 0%;
+    transition: 1s;
+    display: inline-block;
+    width: 100%;
+    
+    
+}
+.roll1{
+	font-size: 12px;
+	position: relative;
+	text-align: center;
+	
+	
+}

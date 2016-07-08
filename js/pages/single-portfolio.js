@@ -121,3 +121,18 @@ $(".navbar-toggle").click(function() {
 	if ($(window).scrollTop() < 200 && $(window).innerWidth() <= 769)
 		$("nav").toggleClass('active-mobile');
 });
+$(".pangu").click(function(){
+	window.open("http://www.panguweb.cn/")
+})
+$(".jiuyou").click(function(){
+	window.open("http://www.pkey.cn/")
+})
+$(".wecheat").click(function(){
+	window.open("https://mumu1993.github.io/wechat/")
+})
+$(".dom").click(function(){
+	window.open("https://mumu1993.github.io/dom/")
+})
+$(".js").click(function(){
+	window.open("https://mumu1993.github.io/js-partice/")
+})

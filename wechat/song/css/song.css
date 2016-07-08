@@ -1,0 +1,315 @@
+html{
+	font-size: calc(100vw/32);
+}
+#page1{
+	background: url(../img/all_page_bg.jpg);	
+	height: 100%;
+}
+#head{
+	background: url(../img/face.png);
+	width: 14rem;
+	height: 17rem;
+	position: absolute;
+	left: 15.4rem;
+	top: 20rem;
+	background-size: 100% 100%;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	z-index: 100;
+	transform-origin: center center; 
+}
+#shelf_bg{
+	background: url(../img/shelf_bg.png);
+	width: 26rem;
+	height: 26rem;
+	bottom: 12rem;
+	left: 3rem;
+	position: absolute;
+	
+}
+#song{
+	background: url(../img/song.png);
+	background-size: 100% 100%;
+	width: 26rem;
+	height: 28rem;
+	left: 3rem;
+	top: 20rem;
+	position: absolute;
+	
+}
+#demond{
+	background: url(../img/demond.png);
+	background-size: 100% 100%;
+	width: 3rem;
+	height: 3rem;
+	left: 24rem;
+	bottom: 4rem;
+	position: absolute;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+.heart{
+	top: 5rem !important;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+#page3{
+	background: url(../img/all_page_bg.jpg);
+}
+#test_head1{
+	background: url(../img/head1.png);
+	width: 7rem;
+	height: 7rem;
+	position: absolute;
+	left: 5rem;
+	top: 9rem;
+}
+#test_head2{
+	background: url(../img/head2.png);
+	width: 7rem;
+	height: 7rem;
+	position: absolute;
+	left: 13rem;
+	top: 11rem;
+}
+#test_head3{
+	background: url(../img/head3.png);
+	width: 6rem;
+	height: 7rem;
+	position: absolute;
+	left: 21rem;
+	top: 9rem;
+}
+#test_text{
+	background: url(../img/test_text.jpg);
+	width: 23rem;
+	height: 4rem;
+	position: absolute;
+	left: 4.5rem;
+	top: 18rem;
+}
+#test_btn{
+	background: url(../img/next_btn.jpg);
+	width: 13rem;
+	height: 5rem;
+	position: absolute;
+	left: 10rem;
+	bottom: 5rem;
+}
+#confirm{
+	background: url(../img/page1_btn.png);
+	position: absolute;
+	left: 10rem;
+	height: 5rem;
+	width: 12rem;
+	bottom: 3rem;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+#head1{
+	background: url(../img/head1.png);
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	left: 5rem;
+	top: 10rem;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+#head2{
+	background: url(../img/head2.png);
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	left: 5rem;
+	top: 15rem;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+#head3{
+	background: url(../img/head3.png);
+	width: 3.75rem;
+	height: 5rem;
+	position: absolute;
+	left: 13rem;
+	top: 14rem;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+#head4{
+	background: url(../img/head4.png);
+	width: 5rem;
+	height: 5rem;
+	position: absolute;
+	left: 21rem;
+	top: 14rem;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+#header{
+	background: url(../img/header.png);
+	position: absolute;
+	width: 24rem;
+	height: 9rem;
+	top: 5rem;
+	left: 4rem;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	background-size: 100% 100%;
+	
+}
+#page2{
+	background: url(../img/page2_bg.png);
+}
+#hand{
+	background: url(../img/p2_shou.png);
+	position: absolute;
+	width: 10rem;
+	height: 6rem;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	background-size: 100% 100%;
+	bottom: 3rem;
+	left: 19rem;
+	z-index: 100;
+}
+
+#lamp{
+	background: url(../img/lamp.png);
+	height: 11rem;
+	width: 4rem;
+	left: 24rem;
+	bottom: 4rem;
+}
+#sofa{
+	background: url(../img/sofa.png);
+	height: 7rem;
+	width: 14rem;
+	left: 10rem;
+	bottom: 4rem;
+}
+#shelf{
+	background: url(../img/shelf.png);
+	height: 7rem;
+	width: 6rem;
+	left: 4rem;
+	bottom: 4rem;
+}
+.content{
+	position: absolute;
+	width: 27rem;
+	height: 12rem;
+	top: 26rem;
+	left: 2.5rem;
+	font-size: 1.4rem;
+	text-align: center;
+}
+.content p{
+	line-height: 3rem;
+	
+}
+.content ul{
+	margin-top: 1rem;
+	padding: 0 3rem;
+	left: 3rem;
+	box-sizing: border-box;
+	position: relative;
+}
+.content li{
+	position: relative;
+	width: 50%;
+	float: left;
+	line-height: 3rem;
+	text-align: left;
+}
+#button{
+	width: 13rem;
+	height: 5rem;
+	position: absolute;
+	top: 43rem;
+	left: 9rem;
+}
+#but1{
+	width: 13rem;
+	height: 5rem;
+	position: absolute;
+	top: 37rem;
+	left: 9rem;
+	background: url(../img/scroll_btn.png);
+	background-size: 100% 100%;
+}
+#but2{
+	width: 13rem;
+	height: 5rem;
+	position: absolute;
+	top: 37rem;
+	left: 9rem;
+	background: url(../img/scroll_btn.png);
+	background-size: 100% 100%;
+}
+#but3{
+	width: 13rem;
+	height: 5rem;
+	position: absolute;
+	top: 37rem;
+	left: 9rem;
+	background: url(../img/scroll_btn.png);
+	background-size: 100% 100%;
+}
+#page4{
+	background: url(../img/all_page_bg.jpg);
+}
+#page5{
+	background: url(../img/all_page_bg.jpg);
+}
+#page6{
+	background: url(../img/all_page_bg.jpg);
+}
+.scroll_text{
+	position: absolute;
+	top: 8rem;
+	height: 35rem;
+	width: 24rem;
+	left: 4rem;
+	background: #f094ae;
+	box-shadow: 3px 3px 3px #b39f89;
+	border-radius: 10px;
+	line-height: 3rem;
+}
+#heart1{
+	background: url(../img/heart.png);
+	width: 3rem;
+	height: 3rem;
+	left: 20rem;
+	top: 2rem;
+}
+#heart2{
+	background: url(../img/heart1.png);
+	width: 3rem;
+	height: 3rem;
+	left: 2rem;
+	top: 2rem;
+}
+.scroll_text h3{
+	position: absolute;
+	left: 10rem;
+	font-size: 2rem;
+	font-weight: 200;
+	text-align: center;
+	color: white;
+	top: 2rem;
+}
+.scroll_text p{
+	position: absolute;
+	font-size: 1.5rem;
+	font-weight: 200;
+	color: white;
+	padding: 2rem;
+	top: 4rem;
+	line-height: 2.5rem;
+}
+.scroll_text p span{
+	font-weight: 300;
+	font-size: 1.7rem;
+	line-height: 2rem;
+}

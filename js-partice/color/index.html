@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+        html,body{
+            height: 100%;
+            width: 100%;
+            background: black;
+        }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .wrap{
+                width: 300px;
+                border: 2px solid cyan;
+                padding: 20px;
+                margin: 20px auto;
+                background: white;
+            }
+            header{
+                width: 300px;
+                position: relative;
+            }
+            .left{
+                width: 50%;
+                float: left;
+            }
+            .right{
+                width: 50%;
+                float: right;
+                text-align: right;
+            }
+            .main{
+                text-align: center;
+            }
+            .txt{
+                line-height: 120px;
+                font-size: 50px;
+                margin: 20px auto;
+            }
+            .tip{
+                line-height: 30px;
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+            ul li{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                display: inline-block;
+            }
+            .btns{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: inline-block;
+            }
+            li{
+                float: left;
+                width: 20%;
+                background: gray;
+                border: 1px solid black;
+                box-sizing: border-box;
+                line-height: 50px;
+                font-size: 30px;
+                display: block;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <header>
+                <div class="left">
+                    <p>倒计时:<span>30</span></p>
+                </div>
+                <div class="right">
+                    <p>得分:<span>0</span></p>
+                </div>
+            </header>
+            <div class="main">
+                <p class="txt">
+                    黄
+                </p>
+                <p class="tip">
+                    根据字体的颜色选出与其颜色对应的中文描述
+                </p>
+                <ul class="btns">
+                    <li>红</li>
+                    <li>黄</li>
+                    <li>蓝</li>
+                    <li>绿</li>
+                    <li>黑</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript">
+    var oTxt = document.querySelector('.main .txt');
+    var txts = ['红','黄','蓝','绿','黑'];
+    var colors = ['red','yellow','blue','green','black'];
+    var btns = document.querySelectorAll('.btns li')
+    var randomColorNum
+    var countDown = document.querySelector('.left>p>span');
+    var marks = document.querySelector('.right>p>span');
+    var timer = null;
+    var Down = 30;
+    var clickable = true;
+    var count = 0;
+    // 1、随机文本和颜色赋值给main中的txt
+    var showTxt = function () {
+        var randomTxtNum = parseInt(Math.random()*5);
+        randomColorNum = parseInt(Math.random()*5);
+        var txt = txts[randomTxtNum];
+        var color = colors[randomColorNum];
+        oTxt.style.color = color;
+        oTxt.innerHTML = txt;
+    }
+    // 2、打乱文本顺序，并且提取不重复的随机颜色，赋值给btns
+    var showBtns = function () {
+        var randomSub = function () {
+            var arr = [];
+            while (arr.length<5) {
+                var bol = true;
+                var r = parseInt(Math.random()*5);
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i]==r) {
+                        bol = false;
+                        break;
+                    }
+                }
+                if (bol) {
+                    arr.push(r);
+                }
+            }
+            return arr;
+        }
+        var randomTxtSub = randomSub();
+        var randomColorSub = randomSub();
+        console.log(randomTxtSub);
+        for (var i = 0; i < 5; i++) {
+            btns[i].style.color = colors[randomColorSub[i]];
+            btns[i].innerHTML = txts[randomTxtSub[i]];
+            btns[i].colorSub = randomTxtSub[i];
+        }
+    }
+    showTxt();
+    showBtns();
+    // 3、匹配 如果正确 重复1 2 得分 ++
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+            if (!clickable) {
+                return;
+            }
+            if (randomColorNum == this.colorSub) {
+                // 4、计算分数
+                count++;
+                marks.innerHTML = count;
+                showBtns();
+                showTxt();
+            }
+        }
+    }
+    // 5、游戏结束
+    var gameOver = function () {
+        if (count<5) {
+            alert('小菜比')
+        }else if (count<10) {
+            alert('一般般')
+        }else {
+            alert('有病吧，玩这个玩这么厉害')
+        }
+    }
+    // 6、计时器
+    if (timer) {
+        clearInterval(timer);
+    }
+    timer = setInterval(function () {
+        Down--;
+        if (Down<=0) {
+            clearInterval(timer);
+            clickable = false;
+            gameOver();
+        }
+        countDown.innerHTML = Down;
+    },1000)
+
+
+    // // 4、倒计时
+    //
+    //
+    // var arr = [];
+    // while (arr.length<5) {
+    //     var bol = true;
+    //     var r = parseInt(Math.random()*5);
+    //     for (var i = 0; i < arr.length; i++) {
+    //         if (arr[i]==r) {
+    //             bol = false;
+    //             break;
+    //         }
+    //     }
+    //     if (bol) {
+    //         arr.push(r);
+    //     }
+    // }
+    // console.log(arr);
+    //
+    // var array = [];
+    //
+    // // 生成5个随机数
+    // while (array.length < 5) {
+    //    console.log('while');
+    //    // 产生随机数
+    //    var random = parseInt(Math.random() * 10);
+    //    // 和数组中所有元素进行比对，判断是否有一致的
+    //    var flag = false;
+    //    for (var j = 0; j < array.length; j++) {
+    //        if (random == array[j]) {
+    //            flag = true;
+    //        }
+    //    }
+    //    if (flag == false) {
+    //        array.push(random);
+    //    }
+    // }
+    // console.log(array);
+    //
+</script>

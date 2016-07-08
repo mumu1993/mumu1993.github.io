@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            *{
+                margin: 0;
+                padding: 0;
+
+            }
+            html,body{
+                height: 100%;
+            }
+            .clock{
+                width: 300px;
+                height: 300px;
+                border: 20px solid rgba(200, 200, 200, 0.5);
+                box-shadow: 0 0 20px rgba(120, 120, 120, 0.5);
+                border-radius: 50%;
+                position: relative;
+                margin: 20px;
+                /*background: url('53.pic.jpg') ;*/
+                background-clip: border-box;
+                background-size: cover;
+                background-position: 0 -15px;
+            }
+            .numbers div{
+                margin-top: 5px;
+                height: 290px;
+                width: 28px;
+                text-align: center;
+                position: absolute;
+                left: 50%;
+                font-size: 28px;
+                line-height: 28px;
+                margin-left: -14px;
+                color: rgb(50, 50, 50);
+            }
+            .numbers div>span{
+                display: block;
+            }
+            .hour{
+                width: 5px;
+                height: 100px;
+                position: absolute;
+                background: #1F1F1F;
+                transform-origin: top center;
+                left: 50%;
+                top: 50%;
+                margin-left: -2.5px;
+
+            }
+            .minute{
+                width: 3px;
+                height: 120px;
+                position: absolute;
+                background: #27408B;
+                transform-origin: top center;
+                left: 50%;
+                top: 50%;
+                margin-left: -1.5px;
+
+            }
+            .second{
+                width: 2px;
+                height: 140px;
+                position: absolute;
+                background: #7FFF00;
+                transform-origin: top center;
+                left: 50%;
+                top: 50%;
+                margin-left: -1px;
+
+            }
+        </style>
+    </head>
+    <body>
+            <div class="clock">
+                <div class="numbers">
+                    <div><span>12</span></div>
+                    <div><span>1</span></div>
+                    <div><span>2</span></div>
+                    <div><span>3</span></div>
+                    <div><span>4</span></div>
+                    <div><span>5</span></div>
+                    <div><span>6</span></div>
+                    <div><span>7</span></div>
+                    <div><span>8</span></div>
+                    <div><span>9</span></div>
+                    <div><span>10</span></div>
+                    <div><span>11</span></div>
+
+                </div>
+                <div class="hour">
+
+                </div>
+                <div class="minute">
+
+                </div>
+                <div class="second">
+
+                </div>
+            </div>
+    </body>
+</html>
+<script type="text/javascript">
+    var nums = document.querySelectorAll('.numbers>div')
+    var nums_1 = document.querySelectorAll('.numbers>div>span')
+    var hour = document.querySelector('.hour')
+    var minute = document.querySelector('.minute')
+    var second = document.querySelector('.second')
+    timer = setInterval(function () {
+        var date = new Date();
+        var h = date.getHours();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        if (h >= 12) {
+            h -=12;
+        }
+        var hdeg = 30*h + 0.1*min +180;
+        var mdeg = 6*min + 180;
+        var sdeg = 6*sec + 180;
+        console.log(hdeg);
+        console.log(mdeg);
+        hour.style.transform = 'rotateZ(' + hdeg + 'deg)';
+        minute.style.transform = 'rotateZ(' + mdeg +'deg)';
+        second.style.transform = 'rotateZ(' + sdeg + 'deg)';
+    },1000);
+    for (var i = 0; i < nums.length; i++) {
+        nums[i].style.transform = 'rotateZ(' +  i * 30  + 'deg)';
+    }
+    for (var i = 0; i < nums_1.length; i++) {
+        nums_1[i].style.transform = 'rotateZ(' + i*-30 + 'deg)';
+    }
+
+</script>

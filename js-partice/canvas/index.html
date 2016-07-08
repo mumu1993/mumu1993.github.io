@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>打飞机</title>
+        <link rel="stylesheet" href="reset.css">
+        <style media="screen">
+            html, body {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <audio id="audio" src="audio/game_music.mp3" autoplay loop>
+            您的浏览器不支持audio
+        </audio>
+        <canvas id="canvas" width="500" height="500">
+            您的浏览器不支持canvas
+        </canvas>
+
+    </body>
+    <script src="loading.js" charset="utf-8"></script>
+    <script src="common.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        // 获取canvas以及上下文对象
+        var audio = document.getElementById("audio");
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext('2d');
+        // 获取canvas的宽高
+        var canvasWidth, canvasHeight;
+
+
+        // 修改canvas大小
+        function changeSize() {
+            canvas.width = document.body.clientWidth;
+            canvas.height = document.body.clientHeight;
+            canvasWidth = canvas.width;
+            canvasHeight = canvas.height;
+        }
+        changeSize();
+
+
+        // 加载所有图片资源
+        loading({
+            "background": "imgs/background.png",
+            "plane": "imgs/plane.png",
+            "bullet1": "imgs/bullet1.png",
+            "enemy1": "imgs/enemy1.png",
+            "enemy2": "imgs/enemy2.png",
+            "enemy3": "imgs/enemy3.png",
+        }, {
+            done: main
+        });
+
+
+        // 主函数
+        function main(imgs) {
+            // 保存所有子弹
+            var bullets = [];
+            // 保存所有敌机
+            var enemys = [];
+
+            // 敌机分数
+            var score = 0;
+
+
+            // 背景对象
+            var bgObj = {
+                w: canvasWidth,
+                h: canvasHeight,
+                x: 0,
+                y: 0,
+                draw: function () {
+                    // 画出两张图片
+                    ctx.drawImage(imgs.background, this.x, this.y, this.w, this.h);
+                    ctx.drawImage(imgs.background, this.x, this.y - this.h, this.w, this.h);
+                },
+                move: function () {
+                    this.y += 1;
+                    // 临界值
+                    (this.y >= this.h) && (this.y = 0);
+                    // 绘制
+                    this.draw();
+                }
+            };
+
+
+            // 飞机对象
+            var mine = {
+                img: imgs.plane,
+                x: (canvasWidth - imgs.plane.width / 5) / 2,
+                y: canvasHeight - imgs.plane.height,
+                w: imgs.plane.width / 5,
+                h: imgs.plane.height,
+
+                imgStartX: 0, // 图片开始裁剪的X值
+                draw: function (frameNum) {
+                    (frameNum % 3 == 0) && (this.imgStartX = (this.imgStartX == 0) ? this.w : 0);
+                    ctx.drawImage(this.img, this.imgStartX, 0, this.w, this.h,  this.x, this.y, this.w, this.h);
+                }
+            };
+
+
+            // 子弹构造函数
+            function Bullet() {
+                // 子弹的图片
+                var imgObj = imgs.bullet1;
+
+                this.img = imgObj;
+                this.x = mine.x + mine.w / 2 - imgObj.width / 2;
+                this.y = mine.y - imgObj.height / 2;
+                this.w = imgObj.width;
+                this.h = imgObj.height;
+
+                // 子弹的速度
+                this.speed = 8;
+                // 子弹攻击量
+                this.value = 1;
+            }
+            // 使用原型，添加函数
+            Bullet.prototype = {
+                // 子弹移动
+                move: function () {
+                    this.y -= this.speed;
+                },
+                // 清除
+                clear: function () {
+                    return (this.y <= -this.h);
+                },
+                // 绘制子弹
+                draw: function () {
+                    this.move();
+                    ctx.drawImage(this.img, 0, 0, this.w, this.h, this.x, this.y, this.w, this.h);
+                }
+            };
+
+
+
+
+            // 敌军构造函数
+            function Enemy() {
+                // 由随机数决定使用哪张图片
+                var num = random(1, 10);
+                // 图片对象
+                var imgObj = imgs.enemy1;
+                // 图片被拆封为几份
+                var count = 5;
+                // 速度
+                var speed = 2;
+                // 血量
+                var blood = 2;
+
+                if (num >= 10) {
+                    imgObj = imgs.enemy3;
+                    count = 10;
+                    speed = 1.2;
+                    blood = 20;
+                } else if (num >= 8) {
+                    imgObj = imgs.enemy2;
+                    count = 6;
+                    speed = 1.5;
+                    blood = 8;
+                }
+
+                this.img = imgObj;
+                this.speed = speed;
+                this.blood = blood;
+                this.w = imgObj.width / count;
+                this.h = imgObj.height;
+                this.y = -200;
+                this.x = random(0, canvasWidth - this.w);
+
+                // 画出敌机
+                this.imgStartX = 0;
+                this.draw = function () {
+                    this.move();
+                    ctx.drawImage(this.img, this.imgStartX, 0, this.w, this.h, this.x, this.y, this.w, this.h);
+                };
+
+                // 移动
+                this.move = function () {
+                    this.y += this.speed;
+                };
+                // 是否需要移除
+                this.clear = function () {
+                    return (this.y >= canvasHeight);
+                };
+            }
+
+
+
+
+            // 子弹攻击敌机
+            function attackEnemy() {
+
+                // 遍历飞机
+                for (var i = 0; i < enemys.length; i++) {
+                    var e = enemys[i];
+
+                    // 获取当前飞机的x和y
+                    var l1 = e.x;
+                    var r1 = l1 + e.w;
+                    var t1 = e.y;
+                    var b1 = t1 + e.h;
+
+                    // 与每一颗子弹进行比对
+                    for (var j = 0; j < bullets.length; j++) {
+                        var b = bullets[j];
+
+                        // 进行比对
+                        var l2 = b.x;
+                        var r2 = l2 + b.w;
+                        var t2 = b.y;
+                        var b2 = t2 + b.h;
+
+                        // 判断是否撞上了
+                        if (l2 > l1 && r2 < r1 && b2 < b1 && t2 > t1) {
+                            e.blood -= b.value;
+                            bullets.splice(j, 1);
+                            j--;
+                            if (e.blood <= 0) {
+                                enemys.splice(i, 1);
+                                i--;
+                                // 分数增加
+                                score++;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // mine与敌机的碰撞
+            function mineHitEnemys() {
+                for (var i = 0; i < enemys.length; i++) {
+                    var e = enemys[i];
+
+                    var l1 = mine.x;
+                    var r1 = mine.x + mine.w;
+                    var t1 = mine.y;
+                    var b1 = mine.y + mine.h;
+
+                    var l2 = e.x;
+                    var r2 = e.x + e.w;
+                    var t2 = e.y;
+                    var b2 = e.y + e.h;
+
+                    return (l1 < r2 && r1 > l2 && t1 < b2 && b1 > t2);
+                }
+            }
+
+//			console.log(|2|)
+            // 游戏循环
+            var raf = null;
+            var frameNum = 0;
+            function gameloop() {
+                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                frameNum++;
+
+                // 画背景并移动
+                bgObj.move();
+                // 画飞机
+                mine.draw(frameNum);
+                // 画子弹
+                for (var i = 0; i < bullets.length; i++) {
+                    bullets[i].draw();
+
+                    // 判断子弹是否跑到屏幕外面
+                    if (bullets[i].clear()) {
+                        bullets.splice(i, 1);
+                        i--;
+                    }
+                }
+                // 画敌机
+                for (var i = 0; i < enemys.length; i++) {
+                    enemys[i].draw();
+
+                    if (enemys[i].clear()) {
+                        enemys.splice(i, 1);
+                        i--;
+                    }
+                }
+
+                // 检测子弹和敌机的碰撞
+                attackEnemy();
+				
+                // 发射子弹，每个10帧发射一次
+                if (frameNum % 10 == 0) {
+                    var bullet = new Bullet();
+                    bullets.push(bullet);
+                }
+                // 创建敌机，每隔20帧创建一次
+                if (frameNum % 40 == 0) {
+                    if (enemys.length <= 20) {
+                        var enemy = new Enemy();
+                        enemys.push(enemy);
+                    }
+                }
+
+                // 绘制分数
+                ctx.font = "60px Harrington";
+                ctx.strokeText(score, 10, 50);
+
+                if (mineHitEnemys()) {
+                    gameover();
+                    return;
+                }
+
+                raf = window.requestAnimationFrame(gameloop);
+            }
+            gameloop();
+
+
+            // 游戏结束调用
+            function gameover() {
+                window.cancelAnimationFrame(raf);
+
+                // 结束音乐
+                audio.src = "audio/game_over.mp3";
+                audio.loop = false;
+                // audio.currentTime = 0;
+            	// audio.pause();
+
+                ctx.font = "60px Harrington";
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.fillText("GAME OVER", canvasWidth / 2, canvasHeight / 2);
+            }
+
+
+
+            // 给canvas绑定事件
+            canvas.addEventListener('touchstart', function (e) {
+                var ev = e || window.event;
+                if (ev.touches.length == 1) { // 一根手指触摸
+
+                    var x = ev.touches[0].clientX;
+                    var y = ev.touches[0].clientY;
+
+                    // 判断是否点到了飞机
+                    if (x > mine.x && x < mine.x + mine.w && y > mine.y && y < mine.y + mine.h) {
+                        // 获取差值
+                        var disX = x - mine.x;
+                        var disY = y - mine.y;
+
+                        // 手指移动
+                        document.addEventListener('touchmove', function () {
+                            var newX = event.touches[0].clientX - disX;
+                            var newY = event.touches[0].clientY - disY;
+
+                            // 临界值
+                            (newX <= -mine.w / 2 + 3) && (newX = -mine.w / 2 + 3);
+                            (newX >= canvasWidth - mine.w / 2 - 3) && (newX = canvasWidth - mine.w / 2 - 3);
+                            (newY <= 0) && (newY = 0);
+                            (newY >= canvasHeight - mine.h) && (newY = canvasHeight - mine.h);
+
+                            // 修改飞机的位置
+                            mine.x = newX;
+                            mine.y = newY;
+                        }, false);
+                    }
+                }
+            }, false);
+
+			canvas.addEventListener('mousedown', function (e) {
+				console.log(1)
+                var ev = e || window.event;
+                if (ev.touches.length == 1) { // 一根手指触摸
+
+                    var x = ev.touches[0].clientX;
+                    var y = ev.touches[0].clientY;
+
+                    // 判断是否点到了飞机
+                    if (x > mine.x && x < mine.x + mine.w && y > mine.y && y < mine.y + mine.h) {
+                        // 获取差值
+                        var disX = x - mine.x;
+                        var disY = y - mine.y;
+
+                        // 手指移动
+                        document.addEventListener('mousemove', function () {
+                            var newX = event.touches[0].clientX - disX;
+                            var newY = event.touches[0].clientY - disY;
+                            // 临界值
+                            (newX <= -mine.w / 2 + 3) && (newX = -mine.w / 2 + 3);
+                            (newX >= canvasWidth - mine.w / 2 - 3) && (newX = canvasWidth - mine.w / 2 - 3);
+                            (newY <= 0) && (newY = 0);
+                            (newY >= canvasHeight - mine.h) && (newY = canvasHeight - mine.h);
+
+                            // 修改飞机的位置
+                            mine.x = newX;
+                            mine.y = newY;
+                        }, false);
+                    }
+                }
+            }, false);
+
+        }
+
+
+    </script>
+</html>

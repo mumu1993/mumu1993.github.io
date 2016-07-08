@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>message_board</title>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <style media="screen">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                text-decoration: none;
+            }
+            ul,li{
+                list-style: none;
+            }
+            .warp{
+                width: 580px;
+                height: auto;
+                padding: 10px;
+                margin: 10px auto;
+                overflow: hidden;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .wrap-head{
+                width: 38%;
+                float: left;
+            }
+            .head-text{
+                width: 62%;
+                float: left;
+                font-size: 14px;
+                text-align: right;
+            }
+            .main-text{
+                clear: both;
+                margin: 10px auto;
+                width: 100%;
+                display: inline-block;
+            }
+            #mainArea{
+                width: 100%;
+                height: 150px;
+                padding: 10px;
+                box-sizing: border-box;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .warp-footer{
+                width: 100%;
+                display: inline-block;
+            }
+            .warp-icon-cont{
+                float: left;
+                width: 70%;
+            }
+            .warp-icon-cont li{
+                float: left;
+                width:20%;
+                font-size: 20px;
+                line-height: 30px;
+                color: orange;
+            }
+            .warp-icon-cont li>i{
+                height: 30px;
+                font-size: 20px;
+                line-height: 30px;
+
+            }
+            .warp-icon-cont li>span{
+                display: inline-block;
+                margin-left: 3px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 16px;
+                color: black;
+            }
+            .warp-footer-btns{
+                width: 30%;
+                float: left;
+                text-align: right;
+            }
+            .btns{
+                width: 80px;
+                height: 30px;
+                text-align: center;
+                font-size: 18px;
+                line-height: 30px;
+                background-color: orange;
+                color: white;
+                border-radius: 3px;
+                display: inline-block;
+                box-shadow: 0 0 5px pink;
+            }
+            .btns:hover{
+                background-color: yellow;
+            }
+            .show li{
+                margin: 5px 0;
+                border: 1px solid #ccc;
+                padding: 10px;
+                box-sizing: border-box;
+                border-radius: 3px;
+                position: relative;
+                overflow: hidden;
+            }
+            .show h3{
+                margin-bottom: 10px;
+            }
+            .show p{
+                font-size: 16px;
+                color: gray;
+                margin-bottom: 10px;
+                display: inline-block;
+                line-height: 20px;
+                width: 100%;
+            }
+            .show span{
+                font-size: 12px;
+                color: gray;
+            }
+            .warp2{
+                width: 580px;
+                height: auto;
+                padding: 10px;
+                margin: 10px auto;
+                /*overflow: hidden;*/
+                /*border: 1px solid #ccc;*/
+                border-radius: 5px;
+                display: none;
+            }
+            .close{
+                width: 5px;
+                height: 5px;
+                color: #ccc;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                cursor: pointer;
+            }
+            .close:hover{
+                color: #aaa;
+            }
+            .a{
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="warp">
+            <div class="wrap-head">
+                <p>
+                    有什么新鲜事想告诉大家？
+                </p>
+            </div>
+            <div class="head-text">
+                <a href="###">会员可以发布超过140字的微博啦，开通会员立即体验 》</a>
+            </div>
+            <div class="main-text">
+                <textarea name="name" rows="" cols="" id="mainArea"></textarea>
+            </div>
+            <div class="warp-footer">
+                <div class="warp-icon-cont">
+                    <ul>
+                        <li><i class="fa fa-smile-o "></i><span>
+                            表情
+                        </span></li>
+                        <li><i class="fa fa-photo "></i><span>
+                            图片
+                        </span></li>
+                        <li><i class="fa fa-video-camera "></i><span>
+                            视频
+                        </span></li>
+                        <li><i class="fa fa-align-justify "></i><span>
+                            话题
+                        </span></li>
+                        <li><i class="fa fa-flash "></i><span>
+                            头条
+                        </span></li>
+                    </ul>
+                </div>
+                <div class="warp-footer-btns">
+                    <div class="btns" id="btn">
+                        <a href="###">发布</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="warp2">
+            <div class="show">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="tween.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var tx = document.querySelector('.head-text a');
+    var txt = document.querySelector('.head-text a').innerHTML;
+    var clickable = true;
+    var mainArea = document.getElementById('mainArea');
+    mainArea.onkeyup = function(){
+        txtNum = 140-(this.value).length;
+        console.log(txtNum,txt);
+        if(txtNum>0){
+            txt = '还可以输入' + txtNum + '字';
+            tx.innerHTML = txt;
+            tx.style.color = 'pink';
+            clickable = true;
+        }else{
+            txt = '已经超出' + (-txtNum) + '字';
+            tx.innerHTML = txt;
+            tx.style.color = 'red';
+            tx.setAttribute('class','a');
+            clickable = false;
+        }
+
+    }
+    document.onclick = function(){
+        tx.innerHTML = '会员可以发布超过140字的微博啦，开通会员立即体验 》';
+        tx.style.color = 'blue';
+    }
+    window.onload = function(){
+        var content = document.getElementById('mainArea');
+        var submit = document.getElementById('btn');
+        var timer = null;
+        var warp2 = document.querySelector('.warp2');
+        // 点击按钮添加
+        var add = function(obj){
+            var start = -300;
+            var end = 0;
+            var change = 300;
+            var step = 0;
+            var maxStep = 150;
+            if(timer){
+                clearInterval(timer);
+            }
+            timer = setInterval(function(){
+                step++;
+                if(step == maxStep){
+                    clearInterval(timer);
+                }
+                obj.style.top = Tween.Bounce.easeOut(step,start,change,maxStep) + 'px';
+            },16)
+        }
+
+        del = function(a){
+            var start = a.offsetHeight;
+            var end = 0;
+            var change = end - start;
+            var step = 0;
+            var maxstep = 50;
+            if(timer){
+                clearInterval(timer);
+            }
+            timer = setInterval(function(){
+                step++;
+                if(step==maxstep){
+                    clearInterval(timer);
+                }
+                a.style.height = Tween.Linear(step,start,change,maxstep) + 'px';
+                a.style.padding = '0px 10px';
+                console.log(a.offsetHeight);
+            },30)
+        }
+        submit.onclick = function(){
+            var text = content.value;
+            if(!text){
+                alert('请填写内容!');
+                return;
+            }
+            if(!clickable){
+                alert('超出文字限制长度！');
+                return;
+            }
+            content.value = '';
+            warp2.style.display = 'block';
+            var ul1 = document.querySelector('.show>ul');
+            var li = document.createElement('li');
+            var date = new Date();
+            var time = date.toLocaleString();
+            li.innerHTML = '<li><h3>木木</h3><p>'+text+'</p><span>'+time+'发布</span><div class="close">x</div></li>';
+            li.setAttribute('style','position:relative;top:-300px;');
+            add(li);
+            ul1.insertBefore(li,ul1.firstElementChild);
+            var link1 = li.getElementsByTagName('div')[0];
+            link1.onclick = function(){
+                del(li);
+                setTimeout(function(){
+                    ul1.removeChild(li);
+                },1500)
+            }
+        }
+
+    }
+</script>

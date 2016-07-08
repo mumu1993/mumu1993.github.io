@@ -1,0 +1,414 @@
+<html>
+
+	<head>
+
+		<title></title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--禁止识别电话号码和邮箱-->
+		<meta name="format-detection" content="telephone=no">
+		<meta content="email=no" name="format-detection" />
+		<script type="text/javascript">
+			(function() {
+				var resizeEvent = 'orientationchange' in window ? 'orientationchang' : 'resize';
+				var rescale = function() {
+					document.documentElement.style.fontSize = document.documentElement.clientWidth / 320 * 10 + 'px';
+				}
+				window.addEventListener(resizeEvent, rescale, false);
+				document.addEventListener('DOMContentLoaded', rescale, false);
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/new_file.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	</head>
+
+	<body>
+		<div id="container">
+			<!--加载动画-->
+			<div id="loading">
+				<div id="load_pointer" class="clock">
+				</div>
+				<div id="load_bg" class="pointer">
+				</div>
+				<div id="load_text" class="percent">
+				</div>
+			</div>
+			<!--首页-->
+
+			<div id="page1" class="page">
+				<div class="wrapper" id="wrapper">
+					<div class="scroller1">
+						<div class="top">
+							<div class="share_btn">
+
+							</div>
+						</div>
+						<div class="main">
+							<ul class="nav clearfix">
+								<li class="nav_active">首页</li>
+								<li class="details">活动说明</li>
+								<li><a href="###" class="to_video">精美视频</a></li>
+								<li><a href="###">访问官网</a></li>
+								<li class="list">中奖名单</li>
+							</ul>
+							<div class="start_gamble"></div>
+							<div class="car"></div>
+						</div>
+						<div class="display" id="display">
+							<ul>
+								<li class="display_video video_active">
+
+								</li>
+								<li class="display_swiper">
+
+								</li>
+							</ul>
+							<div class="tab" id="video_mp4">
+								<div class="tab_video">
+									<video id="video_play" src="./video/video.mp4" x-webkit-airplay="true" poster="./images/page1_video_poster.png" webkit-playsinline="true" preload="auto" style="display: inline-block;" loop></video>
+									<div class="video_poster">
+									</div>
+								</div>
+								<div class="tab_swiper swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="images/1.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/2.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/3.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/4.jpg" />
+										</div>
+										<div class="swiper-slide">
+											<img src="images/5.jpg" />
+										</div>
+									</div>
+
+									<div class="swiper-button-prev swiper-button-white"></div>
+									<div class="swiper-button-next swiper-button-white"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!--活动说明-->
+			<div id="layer1" class="layer">
+				<div class="inner">
+					<div class="detailWrap">
+						<h3>活动说明</h3>
+						<div class="scrollWrap1">
+							<div class="scroller">
+								<p>
+									东风悦达起亚K4邀你一起看电影过新年！自<span class="fc">1月29号起至2月14号</span>，参与“东风悦达起亚K4邀你看电影”活动，就有机会获得<span class="fc">时光网免费电子兑换票2张</span>！！<br> 与东风悦达起亚K4一起观影，过大年！快来参加吧！
+									<br> 奖项设置：
+									<br> 获胜用户可获得由东风悦达起亚K4提供的的时光网免费电子兑换票2张。
+								</p>
+								<h4>特别声明：</h4>
+								<p>
+									参与者一旦参加本次活动，即视为同意并接受以下内容：<br> 1、参与者应保证其参加本次活动时提交的个人信息真实、准确、有效，如因提交的手机信息有误导致奖品无法发放，将视为自动放弃，时光网不另行安排补发奖品；
+									<br> 2、手机号码为确认中奖和发奖的唯一凭证，请正确填写并保证手机号码畅通，如因填写错误或手机不畅通造成的发奖不成功，将视为放弃中奖资格，并不予重新更正发放；
+									<br> 3、本活动奖品之寄送地址仅限中国大陆地区；
+									<br> 4、本活动奖品不得转换、转让或折换现金；
+									<br> 5、活动期间，严禁通过使用第三方软件、编写代码、黑客攻击、非正常操作流程、非正确手机号或资料信息等手段和方式以获取抽奖机会的行为，一经发现，将取消已获得的抽奖资格及已获奖奖项；
+									<br> 6、如遇不可抗力因素，Mtime时光网有权终止活动，有权以相同价值产品替代已公布奖项；
+									<br> 7、时光电子兑换券的适用城市、影院及观影类型，请咨询：4006118118或者详询电子兑换使用说明（“电子兑换使用说明“+链接：
+									<a href="http://group.mtime.com/help/discussion/3555651/">http://group.mtime.com/help/
+										discussion/3555651/</a>）；<br> 8、本次活动最终解释权归Mtime时光网所有。
+									<br>
+								</p>
+							</div>
+						</div>
+
+						<!-- </div> -->
+					</div>
+					<div class="close js_close_this"></div>
+				</div>
+			</div>
+			<!--中奖名单-->
+			<div id="layer2" class="layer">
+				<div class='inner'>
+					<div class="list-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<ul>
+									<li>
+										<p>来自蒙塔机的钢弹&nbsp;&nbsp;&nbsp;133xxxxxxxx</p>
+									</li>
+									<li>
+										<p>来自蒙塔机的钢弹&nbsp;&nbsp;&nbsp;133xxxxxxxx</p>
+									</li>
+									<li>
+										<p>来自蒙塔机的钢弹&nbsp;&nbsp;&nbsp;133xxxxxxxx</p>
+									</li>
+									<li>
+										<p>来自蒙塔机的钢弹&nbsp;&nbsp;&nbsp;133xxxxxxxx</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="close"></div>
+				</div>
+
+			</div>
+			<!--填写信息-->
+			<div id="layer3" class="layer">
+				<div class="inner">
+					<div id='info'>
+						<form action="" method="post">
+							<div class="info_container">
+								<label for="name">* 姓 名 :</label>
+								<input type="text" name="" id="name" value="" />
+							</div>
+							<div class="info_container">
+								<label for="phoneNum">* 手机号码 :</label>
+								<input type="text" name="" id="phoneNum" value="" />
+							</div>
+							<div class="info_container">
+								<label for="phoneNum">* 所在省份 :</label>
+
+								<div class="city_chose">
+									<select name="province" id="province">
+								<option value="">请选择</option>
+								
+							</select>
+									<span>
+								省
+							</span>
+								</div>
+								<div class="city_chose">
+									<select name="city" id="city">
+								<option value="北京">请选择</option>
+							</select>
+									<span>
+								市
+							</span>
+								</div>
+							</div>
+							<div class="info_container">
+								<label for="saller">* 选择经销商 :</label>
+								<select name="" id="saller">
+								<option value="">请选择</option>
+								
+							</select>
+							</div>
+							<div class="info_container">
+								<label for="car">* 选择车型 :</label>
+								<select name="" id="car" value="请选择">
+								<option value="">请选择</option>
+								<option value="">k4</option>
+								<option value="">k5</option>
+								<option value="">k6</option>
+								
+							</select>
+							</div>
+							<div class="info_container">
+								<label for="buy_time">* 预计购车时间 :</label>
+								<select name="" id="buy_time">
+								<option value="">请选择</option>
+								<option value="">1-3个月</option>
+								<option value="">4-6个月</option>
+								<option value="">半年以上</option>
+							</select>
+							</div>
+							<input type="button" name="" id="submit" value="" />
+						</form>
+					</div>
+					<div class="close">
+
+					</div>
+				</div>
+			</div>
+			<!--赌场道路-->
+			<div id="page2">
+				<div class="page2_bot1">
+
+				</div>
+				<div class="page2_bot2">
+
+				</div>
+			</div>
+			<!--细节展示-->
+			<div id="page3">
+				<div class="wrap">
+
+					<div class="show_car">
+
+					</div>
+					<div class="show_detials">
+						<ul>
+							<li class="active">
+								<div class="control engine">
+
+								</div>
+							</li>
+							<li>
+								<div class="control airbag">
+
+								</div>
+							</li>
+							<li>
+								<div class="control change">
+
+								</div>
+							</li>
+							<li>
+								<div class="control hac">
+
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="details_bg_samllball">
+
+					</div>
+					<div id="engine">
+						<div class="details_left" id="engine_left">
+
+						</div>
+						<div class="details_right" id="engine_right">
+							<div id="engin_pointer" class="pointer">
+
+							</div>
+							<div id="engin_text" class="detail_text">
+
+							</div>
+							<!--<div class="star">
+							
+						</div>-->
+						</div>
+					</div>
+					<div id="airbag">
+						<div class="details_left" id="airbag_left">
+
+						</div>
+						<div class="details_right" id="airbag_right">
+							<div id="engin_pointer" class="pointer">
+
+							</div>
+							<div id="airbag_text" class="detail_text">
+
+							</div>
+							<!--<div class="star">
+							
+						</div>-->
+						</div>
+					</div>
+					<div id="change">
+						<div class="details_left" id="change_left">
+
+						</div>
+						<div class="details_right" id="change_right">
+							<div id="engin_pointer" class="pointer">
+
+							</div>
+							<div id="change_text" class="detail_text">
+
+							</div>
+						</div>
+					</div>
+					<div id="hac">
+
+						<div class="details_left" id="hac_left">
+
+						</div>
+						<div class="details_right" id="hac_right">
+							<div id="engin_pointer" class="pointer">
+
+							</div>
+							<div id="hac_text" class="detail_text">
+
+							</div>
+						</div>
+
+					</div>
+					<div class="page3_but">
+
+					</div>
+					<div id="point" class="bg1">
+
+					</div>
+				</div>
+			</div>
+			<!--开车-->
+			<div id="page4">
+
+				<div id="canvs_in">
+					<div id="car_cover">
+						<div id="car_pointer">
+
+						</div>
+
+					</div>
+					<canvas id="canvas"></canvas>
+				</div>
+			</div>
+			<!--转盘-->
+			<div id="page5">
+				<div class="page5_in">
+					<h3>成功抵达</h3>
+					<p style="font-size: 1.5rem;">下注试试运气吧</p>
+					<p style="font-size: 1.3rem; font-weight: 100;">赢者可兑换
+						<<澳门风云2>>影票</p>
+					<div class="bet_point">
+						<select name="" id="price_sel">
+                        <option value="请选择点数">选择点数：0-36</option>
+                        <option value="0-6">0-6</option>
+                        <option value="7-12">7-12</option>
+                        <option value="13-18">13-18</option>
+                        <option value="19-24">19-24</option>
+                        <option value="25-30">25-30</option>
+                        <option value="31-36">31-36</option>
+                    </select>
+					</div>
+					<div class="circle"></div>
+					<div class="indicator_container">
+						<div class="indicator"></div>
+					</div>
+					
+					<div class="btn_bet"></div>
+				</div>
+				<div id="get_prize">
+					<div class="price_btn">
+
+					</div>
+					<div class="price_out">
+						
+					</div>
+				</div>
+				<div id="lose_prize">
+					<div class="price_btn">
+
+					</div>
+					<div class="price_out">
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+	</body>
+
+</html>
+
+<script src="js/jquery-2.1.3.min.js" type="text/javascript" charset="utf-8"></script>
+<!--<script type="text/javascript" src="js/iscroll.js"></script>-->
+<script src="js/hammer.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/lrz.mobile.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/allDealersData.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/dealersData.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/select.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jroll.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/new_file.js" type="text/javascript" charset="utf-8"></script>

@@ -415,6 +415,7 @@ body,html{
     text-align: left;
 	overflow: hidden;
 	display: none;
+	cursor: pointer;
 }
 .portfolio-item figure {
     overflow: hidden;

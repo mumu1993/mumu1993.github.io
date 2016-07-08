@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title></title>
+        <style media="screen">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            html, body {
+                height: 100%;
+                overflow: hidden;
+                font-size: 0;
+            }
+            .container {
+                margin-top: 50px;
+                position: absolute;
+                border: 1px solid red;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            canvas {
+
+            }
+            .ball {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #000;
+                position: absolute;
+            }
+            #ball1 {
+                left: -15px;
+                top: -15px;
+                background-color: red;
+            }
+            #ball2 {
+                left: 485px;
+                top: 485px;
+                background-color: blue
+            }
+            #show {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 80px;
+                background-color: cyan;
+                text-align: center;
+                line-height: 80px;
+                font-size: 70px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <canvas id="canvas" width="500" height="500">
+                。。。。
+            </canvas>
+            <div class="ball" id="ball1"></div>
+            <div class="ball" id="ball2"></div>
+        </div>
+        <div id="show">
+            cubic-bezier(0.00, 1.00, 1.00, 0.00);
+        </div>
+
+    </body>
+    <script src="common.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        // 获取元素
+        var show = document.getElementById("show");
+        var container = document.querySelector(".container");
+        var ball1 = document.getElementById("ball1");
+        var ball2 = document.getElementById("ball2");
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext('2d');
+
+        // 获取canvas的宽高
+        var canvasWidth = canvas.width;
+        var canvasHeight = canvas.height;
+
+
+        // 画刻度
+        function drawKeDu() {
+            for (var i = 0; i < canvasHeight / 5; i++) {
+                var wOrH = ((i % 10 == 0) ? 9 : 5);
+                ctx.fillRect(0, canvasHeight - (i * 5) - 2, wOrH, 1);
+                ctx.fillRect(i * 5, canvasHeight - wOrH, 1, wOrH);
+            }
+        }
+        drawKeDu();
+
+
+        // 给小球添加鼠标按钮事件
+        ball1.onmousedown = ball2.onmousedown = function (e) {
+            var ev = e || window.event;
+
+            // 计算偏移值
+            var disX = ev.clientX - this.offsetLeft;
+            var disY = ev.clientY - this.offsetTop;
+
+            // 保存当前小球
+            var _this = this;
+
+            // 添加移动事件
+            document.onmousemove = function (e) {
+                var ev = e || window.event;
+                var x = ev.clientX - disX;
+                var y = ev.clientY - disY;
+
+                // 临界值
+                if (x < -_this.offsetWidth / 2) {
+                    x = -_this.offsetWidth / 2;
+                } else if (x > container.clientWidth - _this.offsetWidth /2) {
+                    x = container.clientWidth - _this.offsetWidth /2;
+                }
+                if (y < -_this.offsetHeight / 2) {
+                    y = -_this.offsetHeight / 2;
+                } else if (y > container.clientHeight -  _this.offsetWidth / 2) {
+                    y = container.clientHeight - _this.offsetWidth / 2;
+                }
+
+                _this.style.left = x + "px";
+                _this.style.top = y + "px";
+
+
+                var point1 = {
+                    x: (parseInt(ball1.style.left) || -15) + 15,
+                    y: (parseInt(ball1.style.top) || -15) + 15
+                };
+                var point2 = {
+                    x: (parseInt(ball2.style.left) || 485) + 15,
+                    y: (parseInt(ball2.style.top) || 485) + 15
+                };
+
+                var point0 = {
+                    x: 0,
+                    y: 500
+                };
+                var point3 = {
+                    x: 500,
+                    y: 0
+                };
+
+                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                drawKeDu();
+
+                ctx.beginPath();
+                ctx.moveTo(point0.x, point0.y);
+                ctx.bezierCurveTo(point1.x, point1.y, point2.x, point2.y, point3.x, point3.y);
+                ctx.stroke();
+
+                // 画线
+                ctx.beginPath();
+                ctx.moveTo(0, 500);
+                ctx.lineTo(point1.x, point1.y);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(500, 0);
+                ctx.lineTo(point2.x, point2.y);
+                ctx.stroke();
+
+
+                // 修改显示的文字
+                var showPoint1X = (point1.x / canvasWidth).toFixed(2);
+                var showPoint1Y = (1 - point1.y / canvasHeight).toFixed(2);
+                var showPoint2X = (point2.x / canvasWidth).toFixed(2);
+                var showPoint2Y = (1 - point2.y / canvasHeight).toFixed(2);
+                show.innerHTML = "cubic-bezier("+ showPoint1X +", "+ showPoint1Y +", "+ showPoint2X +", "+ showPoint2Y +");"
+            };
+        };
+
+        // 鼠标抬起，移动移动事件
+        document.onmouseup = function () {
+            document.onmousemove = null;
+        };
+
+
+
+
+
+        // ctrl + g: 快速跳转到某一行
+
+
+    </script>
+</html>

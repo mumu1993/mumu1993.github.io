@@ -1,0 +1,28 @@
+/*清除外边距*/
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+/*清除内边距*/
+ul, ol {
+    padding: 0;
+}
+
+
+/*清除了样式*/
+ul, ol {
+    list-style: none;
+}
+
+
+/*清下划线*/
+a {
+    text-decoration: none;
+}
+
+/*清浮动*/
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}

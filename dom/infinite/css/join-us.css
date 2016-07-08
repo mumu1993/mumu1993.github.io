@@ -1,0 +1,156 @@
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-color: rgb(242, 242, 242);
+            }
+            .content{
+                width: 100%;
+               
+                font-family: "微软雅黑";
+                font-size: 100%;
+                background-color: rgb(242, 242, 242);
+            }
+            .head_wrap {
+                position: fixed;
+                width: 100%;
+                z-index: 222;
+                height: 92px;
+                top: 0;
+                _position: absolute;
+                _margin-top: 0;
+                _top: expression(documentElement.scrollTop);
+            }
+            .head{
+                vertical-align: top;
+                background: rgb(0,0,0);
+                height: 75px;
+                width: 100%;
+                opacity: 0.75;
+                filter: alpha(opacity=75);
+                padding-top: 15px;
+                position: relative;
+                box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            .logo{
+                height: 44px;
+                width: 136px;
+            }
+            img{
+                border: none;
+            }
+            .bar{
+                position: absolute;
+                color: #8e8e8e;
+                font-size: 0.9em;
+                bottom: 5px;
+                font-family: HUM521L;
+                width: 100%;
+            }
+            .nav {
+                width: 80%;
+                text-align: center;
+                margin: auto;
+                min-width: 320px;
+            }
+            .nav a {
+                color: #898989;
+                text-decoration: none;
+                margin-left: 11%;
+            }
+            .nav .active {
+                color: #ffffff;
+            }
+            .nav .firstNav {
+                margin-left: 0;
+            }
+            .head a:hover{
+                color: #ffffff
+            }
+            .content-center{
+                width: 70%;
+                margin: 0 auto;
+                min-width: 300px;
+                max-width: 600px;
+                margin-top: 120px;
+            }
+            .content-center-text{
+                width: 70%;
+               	margin: 0 auto;
+               	min-width: 300px;
+            }
+            .joinus-logo{
+               
+               	min-width: 300px;
+               	
+            }
+            .joinus-logo img{
+            	width: 100%;
+            	}
+            .joinus-text{
+               
+                min-width: 300px;
+            }
+            h3{
+                margin: 20px 0;
+            }
+            .text-in{
+                text-indent: 2em;
+                line-height: 1.3em;
+                font-size: 0.9em;
+            }
+            .text-pic{
+                width: 170px;
+                display: inline-block;
+                margin: 20px 0;
+            }
+            .text-word{
+                font-size: 0.8em;
+                font-family: STSong,"宋体";
+                margin: 0px 0px 20px 0px;
+                line-height: 1.3em;
+            }
+            .foot{
+                margin-top: 30px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                background-color: #e0e0e0;
+                width: 100%;
+                height: 120px;
+
+            }
+            .foot-left{
+                width: 50%;
+                float: left;
+                height: 100%;
+                margin-left: -2%;
+                margin-right: 2%;
+            }
+            .foot-left-1{
+                float: right;
+            }
+            .link1{
+                width: 30px;
+                float: left;
+            }
+            .foot-right{
+                float: left;
+                padding-left: 2%;
+                border-left: 1px solid rgb(114, 176, 176);
+                font-size: 0.7em;
+                line-height: 1.2em;
+                text-shadow: 1px 1px 1px white;
+            }
+@media screen and (max-width: 480px) {
+	
+
+    .nav{
+        font-size: 0.7em;
+        }
+   .foot-right {
+   	font-size: 0.5em;
+   	}
+}

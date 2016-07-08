@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>徐峥</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<!--首页-->
+			<div id="page1" style="display: block;">
+				<!--预加载-->
+				<div id="load">
+					<img id="load_circle" src="img/loading_bg.png">
+					<img id="load_xuzheng" src="img/loading_xuzheng.png">
+					<img id="load_star1" src="img/star.png">
+					<img id="load_star2" src="img/star1.png">
+					<img id="load_txt" src="img/loading_txt.png">
+				</div>
+				<!--主页-->
+				<div id="container" class="container" style="display: none;">
+					<div id="text_container">
+
+					</div>
+					<img src="img/star2.png" id="star1">
+					<img src="img/star4.png" id="star2">
+					<img src="img/star3.png" id="star3">
+					<img src="img/star5.png" id="star4">
+					<!--徐峥出来了-->
+					<div id="xuzheng">
+						<img src="img/super_head.png" id="head" class="animated pulse infinite">
+						<img src="img/super_body1.png" id="body">
+						<img src="img/super_glasses.png" id="glasses" class="animated pulse infinite">
+					</div>
+					<!--手机四分五裂-->
+					<div id="phone" style="display: none;">
+
+						<img src="img/phone.png" id="phone_bg" />
+
+						<div class="chip" id="chip1">
+							<img src="img/chip1.png" alt="" />
+							<img src="img/super_head.png" />
+						</div>
+						<div class="chip" id="chip2"><img src="img/chip2.png" alt="" />
+							<img src="img/super_head.png" /></div>
+						<div class="chip" id="chip3"><img src="img/chip3.png" alt="" />
+							<img src="img/super_head.png" /></div>
+						<div class="chip" id="chip4"><img src="img/chip4.png" alt="" /><img src="img/super_head.png" /></div>
+
+						<div class="chip" id="chip5"><img src="img/chip5.png" alt="" />
+							<img src="img/super_head.png" /></div>
+						<div class="chip" id="chip6"><img src="img/chip6.png" alt="" />
+							<img src="img/super_head.png" /></div>
+						<div class="chip" id="chip7"><img src="img/chip7.png" alt="" /><img src="img/super_head.png" />
+						</div>
+						<div class="chip" id="chip8"><img src="img/chip8.png" alt="" /><img src="img/super_head.png" />
+						</div>
+
+					</div>
+					<!--小星星-->
+					<div id="star">
+						<img src="img/star4.png" />
+						<img src="img/star5.png" alt="" />
+						<img src="img/star6.png" alt="" />
+						<img src="img/star7.png" alt="" />
+						<img src="img/star8.png" alt="" />
+						<img src="img/star9.png" alt="" />
+						<img src="img/star10.png" alt="" />
+						<img src="img/star11.png" alt="" />
+					</div>
+					<a id="up" href="javascript:void(0)" class=" ">
+						<p>找齐徐峥 启动能量</p>
+						<img src="img/up.png">
+					</a>
+				</div>
+				<!--打字音乐-->
+				<div id="type_music">
+					<audio src="sound/type.mp3" id="type_sound" loop="loop">
+						
+					</audio>
+				</div>
+				<!--背景音乐-->
+				<div id="back_music">
+					<audio autoplay="autoplay" loop="loop" id="bg_sound">
+						<source src="sound/bg.mp3"></source>
+					</audio>
+				</div>
+				
+			</div>
+			<!--背景音乐控件-->
+				<div id="bg_cover">
+				</div>
+			<!--游戏-->
+			<div id="page2" style="display: none;">
+				<div id="bgm">
+
+				</div>
+				<div id="tips">
+					<p>去往行星途中，请稍后......</p>
+				</div>
+				<div id="game">
+					<h2>第一关：水星</h2>
+					<img src="img/one_pic1.png" />
+					<img src="img/one_pic2.png" />
+					<img src="img/one_pic3.png" />
+					<!--时间结束-->
+					<div class="game_false_container" style="display: none;">
+						<div class="game_kuang_false">
+							<div class="game_false_wrap">
+								<h4>很遗憾</h4>
+
+								<p>你没有找齐徐峥的8个分身</p>
+
+								<p>看来他要一直囧在宇宙太阳系了</p>
+
+								<div class="try_b"><span>再试一次</span></div>
+								<div class="game_two_b"><span>游戏说明</span></div>
+							</div>
+						</div>
+					</div>
+					<!--弹出窗口-->
+					<div class="suipian_wrap" style="display: none;">
+						<div class="suipian_bg">
+							<h3>你获得1/8碎片</h3>
+
+							<div class="suipian_pic">
+								<var class="pic1"></var>
+							</div>
+							<p>像初恋一样手感的</p>
+							<span>双2.5D弧面玻璃</span>
+						</div>
+					</div>
+					<!--游戏说明-->
+					<div class="game_info_mengban" style="display: none;">
+						<div id="game_info_wrap" style="display: block;">
+							<h3>找徐峥 送vivo</h3>
+							<img src="img/game_info_bt.png" id="game_info_close">
+
+							<div id="game_info">
+								<div id="content">
+									<h4>游戏规则：</h4>
+
+									<p>1.玩家要在规定时间内，依次从2*2至7*7的方格中找徐峥。点对徐峥，即可过关。</p>
+
+									<p>2.每找到一个徐峥，得到一个vivo手机“碎片”。集齐8块“碎片”，即获得一次抽奖机会。</p>
+
+									<p>3.中奖玩家请正确填写信息。信息填写错误或未填写的玩家将被取消中奖资格。</p>
+
+									<p>4.每个ID只有一次中奖机会。</p>
+
+									<p>5.恶意刷奖的玩家一经发现将取消抽奖资格。</p>
+									<h4>活动时间：</h4>
+
+									<p>2015年9月28至10月2日</p>
+									<h4>游戏奖励：</h4>
+
+									<p>一等奖：vivo X5Pro智能手机 2台</p>
+
+									<p>二等奖：vivo充电宝 10个</p>
+
+									<p>三等奖：vivo耳机 20个</p>
+
+									<p>四等奖：《港囧》电影票20套（每套2张）</p>
+
+									<p>五等奖：《港囧》主创签名剧照 50张</p>
+
+									<p>六等奖：vivo官方旗舰店100元代金券 20张</p>
+
+									<p>注：电影票为格瓦拉兑换券，中奖玩家请自行兑换</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--完成游戏-->
+					<div id="vivo_txt_wrap" style="display: none;"></div>
+					<!--获奖-->
+					<div class="draw_mengban" style="display: none;">
+						<div class="draw_mar">
+							<div class="draw_kuang_sucss">
+								<div class="sucss_wrap">
+									<div class="prize_Wrap">
+										<p>恭喜你获得</p>
+										<p class="prize">vivo X5pro一台</p>
+									</div>
+									<form action="javascript:void(0)">
+										<div class="in_contact">
+											<div class="name_wrap">
+												<span>姓名：</span><input type="text" id="name_person" name="user">
+											</div>
+											<div class="phone_number_wrap">
+												<span>手机号码：</span><input type="text" id="phone_num" name="phonenum">
+											</div>
+										</div>
+										<div class="sub">
+											<input id="refer" value="提交信息" type="submit">
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--彩带-->
+					<div id="color_ribbon">
+						
+					</div>
+
+					<!--没中奖-->
+					<div class="false_mengban">
+						<div class="draw_kuang_false">
+							<div class="false_wrap">
+								<h4>很遗憾</h4>
+
+								<p>你没有抽中奖品，再玩一次吧!</p>
+
+								<div class="back_b"><span>返回游戏</span></div>
+							</div>
+						</div>
+					</div>
+					<!--游戏主体-->
+					<div id="game_main">
+						<div id="time"></div>
+						<div id="game_wrap"></div>
+					</div>
+					<!--手机碎片-->
+					<div class="deb_wrap" style="display: none;">
+
+						<div class="deb_one choose" style="display: block;">
+							<img src="img/chip2.png" alt="">
+							<span class="">双2.5D弧面玻璃</span>
+						</div>
+						<div class="deb_two choose" style="display: block;">
+							<img src="img/chip1.png" alt="">
+							<span class="">Funtouch OS系统</span>
+						</div>
+						<div class="deb_three choose" style="display: block;">
+							<img src="img/chip3.png" alt="">
+							<span>知性美颜系统</span>
+						</div>
+						<div class="deb_four choose" style="display: block;">
+							<img src="img/chip4.png" alt="">
+							<span>眼球识别加密系统</span>
+						</div>
+						<div class="deb_five choose" style="display: block;">
+							<img src="img/chip5.png" alt="">
+							<span>1300万像素镜头</span>
+						</div>
+						<div class="deb_six choose" style="display: block;">
+							<img src="img/chip6.png" alt="">
+							<span>Hi-Fi音质耳放</span>
+						</div>
+						<div class="deb_seven choose" style="display: block;">
+							<img src="img/chip7.png" alt="">
+							<span>八核1.7GHz处理器</span>
+						</div>
+						<div class="deb_eight choose" style="display: block;">
+							<img src="img/chip8.png" alt="">
+							<span>PDAF快速相位对焦系统</span>
+						</div>
+						<div class="vivo_phone animated " style="opacity: 0;">
+							<img src="img/vivo_mobile.png" alt="">
+
+							<div class="vivo_txt">
+								<p>成功合体</p>
+
+								<p>距离启动神秘力量</p>
+
+								<p>还差最后一步</p>
+
+								<p>请点击......</p>
+
+								<div class="draw_b">
+									<span>开始抽奖</span>
+								</div>
+								<div class="game_txt_b">
+									<span>游戏说明</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<audio id="bgsound" loop="true" preload>
+        <source src="sound/daojishi.mp3">
+    </audio>
+				<audio id="sound" preload>
+        <source src="sound/false.mp3">
+    </audio>
+				<audio id="false_sound" preload>
+        <source src="sound/false_prize.mp3">
+    </audio>
+				<audio id="succ_sound" preload>
+        <source src="sound/succ_prize.mp3">
+    </audio>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/jquery.rotate.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript" charset="utf-8"></script>

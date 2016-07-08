@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+.bg{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.head{
+    width: 1160px;
+    padding-top: 117px ;
+    position: relative;
+    height: 70px;
+    margin: auto;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+}
+.logo1{
+    bottom: 0px;
+    position: absolute;
+}
+.logo2{
+    bottom: 0px;
+    padding-left: 122px;
+    position: absolute;
+
+}
+.content{
+    width:920px;
+    margin: auto;
+    margin-top: 30px;
+    overflow: hidden;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+}
+.shake1{
+    height: 140px;
+    width: 278px;
+    float: left;
+    overflow: hidden;
+    margin-right: 15px;
+    box-shadow: inset 0px 0px 10px white;
+    margin-top: 5px;
+}
+.shake1:hover{
+	
+}
+.shake2{
+    height: 140px;
+    width: 162px;
+    float: left;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px white;
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+.shake3{
+    height: 140px;
+    width: 278px;
+    float: left;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 10px white;
+    margin-top: 5px;
+    margin-left: 5px;
+    position: relative;
+}
+li:hover{-webkit-animation: 1s bounce;
+          animation:1s  bounce;}
+         @media only screen and (min-width: 1400px)  {
+	     #bg{width: 100%;height: 100%;}
+
+}
+.left{
+    width: 460px;
+    float: left;
+}
+.right{
+    width: 460px;
+    float: left;
+}
+img{
+    vertical-align: top;
+    border: none;
+}
+.content img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.footer{
+    text-align: center;
+    padding-top: 118px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.text{
+    position: absolute;
+    width: 80%;
+    margin: 0 0 0 20%;
+    height: 20%;
+    text-align: center;
+    color: white;
+    bottom: 0%;
+    transition: 1s;
+}

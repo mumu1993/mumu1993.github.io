@@ -1,0 +1,42 @@
+#warp{
+	width: 320px;
+	height: 480px;
+	background: url(../img/myrank_bg.jpg);
+	margin: 10px auto;
+	position: relative;
+}
+#head{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: rgba(200,200,200,0.8);
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	box-shadow: 0 0 3px black;
+}
+#mark{
+	float: left;
+	width: 50%;
+	line-height: 30px;
+}
+#logo{
+	float: left;
+	width: 50%;
+}
+#time{
+	width: 100%;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 40px;
+}
+#time span{
+	line-height: 20px;
+	display: inline-block;
+}
+

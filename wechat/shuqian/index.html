@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body>
+	<!--<audio autoplay loop src="audio/bgmusic.mp3"></audio>-->
+	<div id="loading_wrap">
+		<div id="loading">0%</div>
+	</div>
+	<div class="wrap">
+		<div id="p1">
+			<div id="index">
+				<img class="tiaozhan animated" src="img/tiaozhan.png" alt="" />
+				<img class="yinqu animated" src="img/yinqu.png" alt="" />
+				<img id="start_btn" class="start_btn animated" src="img/start_game.png" alt="" />
+				<img class="shou fadeOut animated" src="img/shou.png"/>
+				<img class="p1_btns_wrap" src="img/p1_btns_wrap.png"/>
+				<img src="img/ranking.png" class="ranking"/>
+				<img src="img/activity_rule.png" class="activity_rule"/>
+				<img src="img/prize.png" class="prize"/>
+				<img src="img/shiyong.png" class="shiyong"/>
+			</div>
+			
+			<div class="p1_mask" id="user_data">
+				<!--提交-->
+				<img class="close" src="img/close.png" alt="" />
+				<form class="userData_wrap">
+					<input class="userData_name" type="text" placeholder="姓名" />
+					<input class="tel" type="text" placeholder="电话" />
+					<input class="sub" type="button" value="&nbsp;" />
+				</form>
+			</div>
+			
+		</div>
+		<div class="p1_mask" id="activity_rule">
+			<img class="close" src="img/close.png" alt="" />
+			<div class="float_wrap">
+				<h2>活动规则</h2>
+				<p>1、每人有多次游戏机会，但成绩只能提交一次，且提交之后不能更改！<br />
+2、提交成绩时要提供姓名及手机号码作为兑奖凭证，因用户本人未在规定时间内提供正确的手机号码造成的奖品损失，由用户个人承担。<br />
+3、活动时间为2016年5月11日-5月19日24:00，活动结束后将在“雾灵山庄”微信公布中奖名单。<br />
+4、获奖规则：系统将根据大家提交的成绩，按照由多到少的规则进行排行，排名第1的网友将获得一等奖，排名第2-第21位的网友将分获二等奖，以此类推。<br />
+5、奖品的发放：活动结束后，将由工作人员与您取得联系，并将相应的卡券编号发送到您提供的手机号码上。</p>
+			</div>
+		</div>
+		<div class="p1_mask" id="prize">
+			<img class="close" src="img/close.png" alt="" />
+			<div class="float_wrap">
+				<h2>活动奖品</h2>
+				<p>一等奖1人：价值1488元7号楼1晚豪华标间免费房券1张，并可享康体项目3折优惠；</p>
+				<p>二等奖20人：100元订房代金券每人1张，并可享康体项目4折优惠；</p>
+				<p>三等奖50人：50元订房代金券每人1张，并可享康体项目5折优惠。</p>
+				<p>奖品的有效期：2016年5月20日至6月15日（周五、周六及法定节假日不可用）</p>
+			</div>
+		</div>
+		<div class="p1_mask" id="ranking">
+			<img class="close" src="img/close.png" alt="" />
+			<div class="ranking_wrap">
+				<!--
+					前三个的.rank中不用插入名次文本，留空就行
+				-->
+				<ul>
+					<li>
+						<span class="rank"></span>
+						<img class="title_img" src="img/shizhong.png" alt="" />
+						<span class="user_name">聪明的小明</span>
+						<span class="point">800分</span>
+					</li>
+					<li>
+						<span class="rank"></span>
+						<img class="title_img" src="img/shizhong.png" alt="" />
+						<span class="user_name">聪明的小明</span>
+						<span class="point">800分</span>
+					</li>
+					<li>
+						<span class="rank"></span>
+						<img class="title_img" src="img/shizhong.png" alt="" />
+						<span class="user_name">聪明的小明</span>
+						<span class="point">800分</span>
+					</li>
+					<li>
+						<span class="rank">111</span>
+						<img class="title_img" src="img/shizhong.png" alt="" />
+						<span class="user_name">聪明的小明</span>
+						<span class="point">800分</span>
+					</li>
+					<li>
+						<span class="rank">1</span>
+						<img class="title_img" src="img/shizhong.png" alt="" />
+						<span class="user_name">聪明的小明</span>
+						<span class="point">800分</span>
+					</li>
+					<li>
+						<span class="rank">1</span>
+						<img class="title_img" src="img/shizhong.png" alt="" />
+						<span class="user_name">聪明的小明</span>
+						<span class="point">800分</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="p1_mask" id="shiyong">
+			<img class="close" src="img/close.png" alt="" />
+			<div class="float_wrap">
+				<h2>奖券使用说明</h2>
+				<p>1、奖品的使用：请务必至少提前一周致电010-81027788或81027799进行预约，并于入住时向前台服务人员出示您手机上收到的卡券编号即可使用（需同时验证获奖人姓名与手机号码）。<br />
+2、代金券仅适用于线下门市价入住客房消费使用，不适用于通过携程或微信等其他线上渠道预定使用。<br />
+3、免费房安排的房间将视当时酒店排房情况而定，如您所预约的时段预订已满，将与您协商调整入住时间。<br />
+4、免费房券及代金券不得用于除订房外其他产品消费，不得与酒店其他优惠折扣或礼券同时使用，且不予退换、兑换现金或找赎。<br />
+5、对于恶意刷奖者和作弊者，主办方有权取消其兑奖资格。</p>
+			</div>
+		</div>
+		<div id="p2">
+			<div id="game">
+				<img class="kuang" src="img/p2_kuang.png"/>
+				<img class="p2_txt" src="img/p2_txt1.png" alt="" />
+				<div class="qian_wrap">
+					<img id="qian_swiper" class="p2_qian" src="img/p2_qian.jpg"/>
+				</div>
+				<img class="p2_zhuan" src="img/p2_zhuan.png" alt="" />
+				<img class="p2_shou fadeOutUp animated" src="img/p2_shou.png"/>
+				<div id="timeDown">
+					<span class="time_num">0</span>
+					<span class="time_num">0</span>
+					<span class="time_num">0</span>
+					<span class="clock">60</span>
+				</div>
+			</div>
+		</div>
+		<div id="p3">
+			<div id="result">
+				<img class="p3_acquire" src="img/p3_acquire.png" alt="" />
+				<div id="result_num">￥888</div>
+				<div id="result_txt">没办法！你已经强到没有对手了</div>
+				<div class="result_rank">我的辉煌战绩:￥<span id="highScore">999</span>  当前排名：<span id="result_rank">62</span>位</div>
+				<img class="p3_again" src="img/p3_again.png" alt="" />
+				<img class="p3_share_btn" src="img/p3_share_btn.png" alt="" />
+				<img class="p1_btns_wrap" src="img/p1_btns_wrap.png"/>
+				<img src="img/ranking.png" class="ranking"/>
+				<img src="img/activity_rule.png" class="activity_rule"/>
+				<img src="img/prize.png" class="prize"/>
+				<img src="img/shiyong.png" class="shiyong"/>
+			</div>
+			<div class="p1_mask" id="share">
+				<img class="p3_share" src="img/p3_share.png"/>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/touch.min.js"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+
+
+
+
+
+
+</html>

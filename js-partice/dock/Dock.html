@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title></title>
+        <style media="screen">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            #container {
+                position: absolute;;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                text-align: center;
+            }
+            #container img {
+                width: 50px;
+                transition: all .1s linear;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="container">
+            <img src="imgs/img_1.png" alt="">
+            <img src="imgs/img_2.png" alt="">
+            <img src="imgs/img_3.png" alt="">
+            <img src="imgs/img_4.png" alt="">
+            <img src="imgs/img_5.png" alt="">
+            <img src="imgs/img_6.png" alt="">
+            <img src="imgs/img_7.png" alt="">
+            <img src="imgs/img_8.png" alt="">
+            <img src="imgs/img_9.png" alt="">
+            <img src="imgs/img_1.png" alt="">
+            <img src="imgs/img_2.png" alt="">
+            <img src="imgs/img_3.png" alt="">
+            <img src="imgs/img_4.png" alt="">
+            <img src="imgs/img_5.png" alt="">
+            <img src="imgs/img_6.png" alt="">
+            <img src="imgs/img_7.png" alt="">
+            <img src="imgs/img_8.png" alt="">
+            <img src="imgs/img_9.png" alt="">
+        </div>
+
+    </body>
+    <script type="text/javascript">
+        // 获取元素
+        var container = document.querySelector("#container");
+        var imgs = document.querySelectorAll("img");
+
+        // 添加鼠标移动事件
+        container.onmousemove = function (e) {
+            var ev = e || window.event;
+
+            // 获取鼠标点的x和y的值
+            var point = {
+                x: ev.clientX,
+                y: ev.clientY
+            };
+
+            // 循环操作每一张图片
+            for (var i = 0; i < imgs.length; i++) {
+                var img = imgs[i];
+                // 获取当前图的中心点
+                var center = {
+                    x: img.offsetLeft + img.offsetWidth / 2,
+                    y: container.offsetTop + img.offsetHeight / 2
+                };
+
+                // 计算鼠标点和当前图片中心点的距离
+                var distance = Math.sqrt(Math.pow(point.x - center.x, 2) + Math.pow(point.y - center.y, 2));
+
+                // 计算比例
+                var scale = 1 - distance / 300;
+                // (scale <= 0.5) ? (scale = 0.5) : null;
+
+                // (scale <= 0.5) && (scale = 0.5);
+                if (scale <= 0.5) {
+                    scale = 0.5;
+                }
+
+                // 修改img的宽度
+                img.style.width = scale * 100 + "px";
+            }
+        };
+        // 给container绑定鼠标移出事件
+        container.onmouseout = function () {
+            for (var i = 0; i < imgs.length; i++) {
+                imgs[i].style.width = "50px";
+            }
+        };
+
+    </script>
+</html>

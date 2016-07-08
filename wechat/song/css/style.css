@@ -1,0 +1,834 @@
+body {
+  background-color : grey;
+}
+
+#test {
+  margin : 5px;
+}
+
+#caseVerte {
+  background-color : #30bf82;
+  height : 140px;
+  width : 150px;
+  padding-top : 10px;
+  float :left;
+}
+
+#caseBleu {
+  background-color : #40dbff;
+  height : 140px;
+  width : 150px;
+  padding-top : 10px;
+  float : left;
+}
+
+#caseRouge {
+  background-color : #bf3037;
+  height : 140px;
+  width : 150px;
+  padding-top : 10px;
+  float : left;
+  position : relative;
+}
+
+#caseMarron {
+  background-color : #ffa773;
+  height : 140px;
+  width : 150px;
+  padding-top : 10px;
+  float : left;
+  position : relative;
+}
+
+#caseViolette {
+  background-color : #592780;
+  height : 140px;
+  width : 150px;
+  padding-top : 10px;
+  float : left;
+  position : relative;
+}
+
+#caseBlanche {
+  background-color : #C2C2C2;
+  height : 100%;
+  width : 100%;
+  padding-top : 10px;
+  float : left;
+  position : relative;
+}
+
+#casePourpre {
+  background-color : #422c83;
+  height : 140px;
+  width : 150px;
+  padding-top : 10px;
+  float : left;
+  position : relative;
+}
+
+#caseVerteClaire {
+  background-color : #C9F76F;
+  height : 140px;
+  width : 150px;
+  padding-top : 10px;
+  float : left;
+  position : relative;
+}
+
+#caseGrise {
+  background-color : #222222;
+  height : 140px;
+  width : 150px;
+  padding-top : 10px;
+  float : left;
+  position : relative;
+}
+
+#caseMarronFonce {
+  background-color : #FFEC73;
+  height : 140px;
+  width : 150px;
+  padding-top : 10px;
+  float : left;
+  position : relative;
+}
+
+#caseVerte #load {
+  color : #fbfbfb;
+  font-family : calibri;
+  text-align : center;
+}
+
+#caseBleu #load {
+  color : #0086a6;
+  font-family : calibri;
+  text-align : center;
+}
+
+#caseRouge #load {
+  color : #ff737a;
+  font-family : calibri;
+  text-align : center;
+  margin-top : 50px; 
+}
+
+#caseMarron #load {
+  color : #bf6530;
+  font-family : calibri;
+  text-align : center;
+  margin-top : 50px; 
+}
+
+#caseViolette #load {
+  color : #D8A6FF;
+  font-family : calibri;
+  text-align : center;
+  margin-top : 100px;
+}
+
+#caseBlanche #load {
+  color : #fff;
+  font-family : calibri;
+  text-align : center;
+  position : absolute;	
+  top : 47%;
+  left :48%;
+  margin-left: -11px;
+  font-size: 30px;
+  
+}
+
+#casePourpre #load {
+  color : #886ed7;
+  font-family : calibri;
+  text-align : center;
+  position : absolute;
+  top : 42px;
+  left :42px;
+}
+
+#caseVerteClaire #load {
+  color : #444444;
+  font-family : calibri;
+  text-align : center;
+  position : absolute;
+  top : 42px;
+  left :42px;
+}
+
+#caseGrise #load {
+  color : #222;
+  font-family : calibri;
+  text-align : center;
+  position : relative;
+  top : 42px;
+  font-size : 11px;
+}
+
+/****DEBUT CASE 1****/
+#caseVerte #case1 {
+  height  : 10px;
+  width : 100px;
+  background-color : #fbfbfb;
+  animation : case1 2.25s infinite;
+  -webkit-animation : case1 2.25s infinite;
+}
+
+#caseBleu #case1 {
+  height  : 10px;
+  width : 100px;
+  background-color : #0086a6;
+  animation : case1 2.25s infinite;
+  -webkit-animation : case1 2.25s infinite;
+}
+
+@-webkit-keyframes case1 {
+  0% {width : 0%;}
+  50% {width : 90px;}
+  100% {width : 0%;}
+}
+
+@keyframes case1 {
+  0% {width : 0%;}
+  50% {width : 90px;}
+  100% {width : 0%;}
+}
+/****FIN CASE 1****/
+
+/****DEBUT CASE 2****/
+#caseVerte #case2 {
+  height : 10px;
+  width : 10px;
+  background-color : #fbfbfb;
+  animation : case2 2s infinite;
+  -webkit-animation : case2 2s infinite;
+}
+
+#caseBleu #case2 {
+  height : 10px;
+  width : 10px;
+  background-color : #0086a6;
+  animation : case2 2s infinite;
+  -webkit-animation : case2 2s infinite;
+}
+
+@-webkit-keyframes case2 {
+  0% {width : 0%;}
+  50% {width : 100px;}
+  100% {width : 0%;}
+}
+
+@keyframes case2 {
+  0% {width : 0%;}
+  50% {width : 100px;}
+  100% {width : 0%;}
+}
+/****FIN CASE 2****/
+
+/****DEBUT CASE 3****/
+#caseVerte #case3 {
+  height : 10px;
+  width : 10px;
+  background-color : #fbfbfb;
+  animation : case3 1.75s infinite;
+  -webkit-animation : case3 1.75s infinite;
+}
+
+#caseBleu #case3 {
+  height : 10px;
+  width : 10px;
+  background-color : #0086a6;
+  animation : case3 1.75s infinite;
+  -webkit-animation : case3 1.75s infinite;
+}
+
+@-webkit-keyframes case3 {
+  0% {width : 0%;}
+  50% {width : 95px;}
+  100% {width : 0%;}
+}
+
+@keyframes case3 {
+  0% {width : 0%;}
+  50% {width : 95px;}
+  100% {width : 0%;}
+}
+/****FIN CASE 3****/
+
+/****DEBUT CASE 4****/
+#caseVerte #case4 {
+  height : 10px;
+  width : 10px;
+  background-color : #fbfbfb;
+  animation : case3 2.5s infinite;
+  -webkit-animation : case3 2.5s infinite;
+}
+
+#caseBleu #case4 {
+  height : 10px;
+  width : 10px;
+  background-color : #0086a6;
+  animation : case3 2.5s infinite;
+  -webkit-animation : case3 2.5s infinite;
+}
+
+@-webkit-keyframes case4 {
+  0% {width : 0%;}
+  50% {width : 80px;}
+  100% {width : 0%;}
+}
+
+@keyframes case4 {
+  0% {width : 0%;}
+  50% {width : 80px;}
+  100% {width : 0%;}
+}
+/****FIN CASE 4****/
+
+/****DEBUT CASE 5****/
+#caseVerte #case5 {
+  height : 10px;
+  width : 10px;
+  background-color : #fbfbfb;
+  animation : case3 1.5s infinite;
+  -webkit-animation : case3 1.5s infinite;
+}
+
+#caseBleu #case5 {
+  height : 10px;
+  width : 10px;
+  background-color : #0086a6;
+  animation : case3 1.5s infinite;
+  -webkit-animation : case3 1.5s infinite;
+}
+
+@-webkit-keyframes case5 {
+  0% {width : 0%;}
+  50% {width : 105px;}
+  100% {width : 0%;}
+}
+
+@keyframes case5 {
+  0% {width : 0%;}
+  50% {width : 105px;}
+  100% {width : 0%;}
+}
+/****FIN CASE 5****/
+
+/****DEBUT CASE 6****/
+#caseVerte #case6 {
+  height : 10px;
+  width : 10px;
+  background-color : #fbfbfb;
+  animation : case3 5s infinite;
+  -webkit-animation : case3 5s infinite;
+}
+
+#caseBleu #case6 {
+  height : 10px;
+  width : 10px;
+  background-color : #0086a6;
+  animation : case3 5s infinite;
+  -webkit-animation : case3 5s infinite;
+}
+
+@-webkit-keyframes case6 {
+  0% {width : 0%;}
+  50% {width : 75px;}
+  100% {width : 0%;}
+}
+
+@keyframes case6 {
+  0% {width : 0%;}
+  50% {width : 75px;}
+  100% {width : 0%;}
+}
+/****FIN CASE 6****/
+
+/****DEBUT TOP****/
+#top {
+  height : 10px;
+  width : 10px;
+  border-radius : 50%;
+  background-color : #ff737a;
+  position : absolute;
+  top : 10px;
+  left : 65px;
+  animation : turnTop 2s infinite;
+  -webkit-animation : turnTop 2s infinite;
+}
+
+@keyframes turnTop {
+  0% {top : 10px;}
+  50% {top : 40px;}
+  100% {top : 10px;}
+}
+
+@-webkit-keyframes turnTop {
+  0% {top : 10px;}
+  50% {top : 40px;}
+  100% {top : 10px;}
+}
+/****FIN TOP****/
+
+/****DEBUT LEFT****/
+#left {
+  height : 10px;
+  width : 10px;
+  border-radius : 50%;
+  background-color : #ff737a;
+  position : absolute;
+  bottom : 10px;
+  left : 10px;
+  animation : turnLeft 2s infinite;
+  -webkit-animation : turnLeft 2s infinite;
+}
+
+@keyframes turnLeft {
+  0% {bottom : 10px; left : 10px;}
+  50% {bottom : 50px; left : 40px;}
+  100% {bottom : 10px; left : 10px;}
+}
+
+@-webkit-keyframes turnLeft {
+  0% {bottom : 10px; left : 10px;}
+  50% {bottom : 50px; left : 40px;}
+  100% {bottom : 10px; left : 10px;}
+}
+/****FIN LEFT****/
+
+/****DEBUT RIGHT****/
+#right {
+  height : 10px;
+  width : 10px;
+  border-radius : 50%;
+  background-color : #ff737a;
+  position : absolute;
+  bottom : 10px;
+  right : 10px;
+  animation : turnRight 2s infinite;
+  -webkit-animation : turnRight 2s infinite;
+}
+
+@keyframes turnRight {
+  0% {bottom : 10px; right : 10px;}
+  50% {bottom : 50px; right : 40px;}
+  100% {bottom : 10px; right : 10px;}
+}
+
+@-webkit-keyframes turnRight {
+  0% {bottom : 10px; right : 10px;}
+  50% {bottom : 50px; right : 40px;}
+  100% {bottom : 10px; right : 10px;}
+}
+/****FIN RIGHT****/
+
+/****DEBUT BOULE****/
+#boule {
+  height : 10px;
+  width : 10px;
+  position : absolute;
+  top : 80px;
+  left : 10px;
+  background-color : #bf6530;
+  border-radius : 50%;
+  animation : boule 2s infinite;
+  -webkit-animation : boule 2s infinite;
+}
+
+@keyframes boule {
+  0% {left : 10px;opacity : 0;}
+  50% {height : 20px; width : 20px; opacity : 1;}
+  100% {left : 120px; opacity : 0; height : 10px; width : 10px;}
+}
+
+@-webkit-keyframes boule {
+  0% {left : 10px;opacity : 0;}
+  50% {height : 20px; width : 20px; opacity : 1;}
+  100% {left : 120px; opacity : 0; height : 10px; width : 10px;}
+}
+/****FIN BOULE****/
+
+/****DEBUT CERCLE****/
+#cercle {
+  height : 50px;
+  width : 50px;
+  position : absolute;
+  top : 45px;
+  left : 45px;
+  border-radius : 50%;
+  background : linear-gradient(#D8A6FF,#FFECEE);
+  animation : turnCercle 2s infinite;
+  -webkit-animation : turnCercle 5s infinite;
+  animation-timing-function : ease-in-out;
+  -webkit-animation-timing-function : ease-in-out;
+}
+
+@-webkit-keyframes turnCercle {
+  0% {-webkit-transform : rotate(0deg);}
+  100% {-webkit-transform : rotate(10080deg);}
+}
+
+@keyframes turnCercle {
+  0% {transform : rotate(0deg);}
+  100% {transform : rotate(10080deg);}
+}
+
+#cercleCache {
+  height : 40px;
+  width : 40px;
+  position : absolute;
+  border-radius : 50%;
+  background-color : #592780;
+  z-index : 5;
+}
+/****FIN CERCLE****/
+
+/****DEBUT POINT****/
+#point {
+  height : 2px;
+  width : 2px;
+  position : relative;
+  top : -22px;
+  left : 96px;
+  border-radius : 50%;
+  background-color : #D8A6FF;
+  animation : point 1.5s infinite;
+  -webkit-animation : point 1.5s infinite;
+  animation-timing-function : linear;
+  -webkit-animation-timing-function : linear;
+}
+
+@-webkit-keyframes point {
+  0% {left : 96px; opacity : 0;}
+  5% {left : 96px; opacity : 1;}
+  15% {left : 96px; opacity : 0;}
+  30% {left : 99px; opacity : 0;}
+  45% {left : 99px; opacity : 1;}
+  60% {left : 99px; opacity : 0;}
+  75% {left : 102px; opacity : 0;}
+  90% {left : 102px; opacity : 1;}
+  100% {left : 102px; opacity : 0;}
+}
+
+@keyframes point {
+  0% {left : 96px; opacity : 0;}
+  5% {left : 96px; opacity : 1;}
+  15% {left : 96px; opacity : 0;}
+  30% {left : 99px; opacity : 0;}
+  45% {left : 99px; opacity : 1;}
+  60% {left : 99px; opacity : 0;}
+  75% {left : 102px; opacity : 0;}
+  90% {left : 102px; opacity : 1;}
+  100% {left : 102px; opacity : 0;}
+}
+/****FIN POINT****/
+
+/****DEBUT TEST****/
+#test {
+  height : 10px;
+  width : 10px;
+  position : absolute;
+  background-color : #fff;
+  border-radius : 50%;
+  top : 0px;
+  left : 10px;
+}
+
+#rond {
+  height  : 100px;
+  width : 100px;
+  border : 1px solid #fff;
+  border-radius : 50%;
+  position :absolute;
+  top : 50%;
+  left : 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  animation : rond 2s infinite;
+  -webkit-animation : rond 2s infinite;
+}
+
+@keyframes rond {
+  0% {transform : rotate(0deg);}
+  100% {transform : rotate(360deg);}
+}
+
+@-webkit-keyframes rond {
+  0% {-webkit-transform : rotate(0deg);}
+  100% {-webkit-transform : rotate(360deg);}
+}
+/****FIN TEST****/
+
+/****DEBUT VAGUE****/
+#vague {
+  position : absolute;
+  top : 72px;
+  left : 20px;
+}
+
+#vague1 {
+  height : 5px;
+  width : 5px;
+  background-color : #886ed7;
+  float : left;
+  animation : vague1 2.5s infinite;
+  -webkit-animation : vague1 2.5s infinite;
+}
+
+@-webkit-keyframes vague1 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+@keyframes vague1 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+#vague2 {
+  height : 5px;
+  width : 5px;
+  background-color : #886ed7;
+  float : left;
+  animation : vague2 2.5s infinite;
+  -webkit-animation : vague2 2.5s infinite;
+  animation-delay : 0.5s;
+  -webkit-animation-delay : 0.5s;
+}
+
+@-webkit-keyframes vague2 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+@keyframes vague2 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+#vague3 {
+  height : 5px;
+  width : 5px;
+  background-color : #886ed7;
+  float : left;
+  animation : vague3 2.5s infinite;
+  -webkit-animation : vague3 2.5s infinite;
+  animation-delay : 1s;
+  -webkit-animation-delay : 1s;
+}
+
+@-webkit-keyframes vague3 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+@keyframes vague3 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+#vague4 {
+  height : 5px;
+  width : 5px;
+  background-color : #886ed7;
+  float : left;
+  animation : vague4 2.5s infinite;
+  -webkit-animation : vague4 2.5s infinite;
+  animation-delay : 1.5s;
+  -webkit-animation-delay : 1.5s;
+}
+
+@-webkit-keyframes vague4 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+@keyframes vague4 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+#vague5 {
+  height : 5px;
+  width : 5px;
+  background-color : #886ed7;
+  float : left;
+  animation : vague5 2.5s infinite;
+  -webkit-animation : vague5 2.5s infinite;
+  animation-delay : 2s;
+  -webkit-animation-delay : 2s;
+}
+
+@-webkit-keyframes vague5 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+@keyframes vague5 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+#vague6 {
+  height : 5px;
+  width : 5px;
+  background-color : #886ed7;
+  float : left;
+  animation : vague6 2.5s infinite;
+  -webkit-animation : vague6 2.5s infinite;
+  animation-delay : 2.5s;
+  -webkit-animation-delay : 2.5s;
+}
+
+@-webkit-keyframes vague6 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+
+@keyframes vague6 {
+  0% {height : 5px;}
+  50% {height : 30px;}
+  100% {height : 5px;}
+}
+/****FIN VAGUE****/
+
+/****DEBUT TRANSFORM****/
+#tranform {
+  position : absolute;
+  top : 85px;
+  left : 30px;
+}
+
+#transform1 {
+  height : 30px;
+  width : 30px;
+  border-radius : 50%; 
+  background-color : #444444;
+  position : absolute;
+  top : 85px;
+  left : 15px;
+  opacity : 0;
+  animation : transform 4s infinite;
+  -webkit-animation : transform 4s infinite;
+}
+
+#transform2 {
+  height : 30px;
+  width : 30px;
+  border-radius : 50%; 
+  background-color : #444444;
+  position : absolute;
+  top : 85px;
+  left : 54px;
+  opacity : 0;
+  animation : transform 4s infinite;
+  -webkit-animation : transform 4s infinite;
+  animation-delay : 0.5s;
+  -webkit-animation-delay : 0.5s;
+}
+
+#transform3 {
+  height : 30px;
+  width : 30px;
+  border-radius : 50%; 
+  background-color : #444444;
+  position : absolute;
+  top : 85px;
+  left : 94px;
+  opacity : 0;
+  animation : transform 4s infinite;
+  -webkit-animation : transform 4s infinite;
+  animation-delay : 1s;
+  -webkit-animation-delay : 1s;
+}
+
+@-webkit-keyframes transform {
+  0% {opacity : 0;}
+  25% {opacity : 1;}
+  50% {opacity : 0;}
+  75% {opacity : 1;}
+  100% {opacity : 0;}
+}
+
+@keyframes transform {
+  0% {border-radius : 0px; opacity : 0;}
+  20% {border-radius : 0px; opacity : 1;}
+  40% {border-radius : 0px; opacity : 0;}
+  60% {border-radius : 50%; opacity : 0;}
+  80% {border-radius : 50%; opacity : 1;}
+  100% {border-radius : 50%; opacity : 0;}
+}
+/****FIN TRANSFORM****/
+
+/****DEBUT PROGRESS****/
+#progress {
+  height : 10px;
+  width : 120px;
+  position : absolute;
+  top : 60px;
+  left : 10px;
+  box-shadow : 0px 0px 10px #111111 inset;
+}
+
+#charge {
+  height : 10px;
+  width : 120px;
+  position : absolute;
+  top : 0px;
+  left : 0px;
+  background-color : #C9F76F;
+  margin : 0px;
+  animation : charge 7s infinite;
+  -webkit-animation : charge 7s infinite;
+  box-shadow : 0px 0px 5px #222 inset;
+}
+
+@-webkit-keyframes charge {
+  0% {width : 0px;}
+  100% {width : 100%;}
+}
+
+@keyframes charge {
+  0% {width : 0px;}
+  100% {width : 100%;}
+}
+/****FIN PROGRESS****/
+
+/****DEBUT SPINNER****/
+#spinner {
+  height : 40px;
+  width : 40px;
+  /*background-color : #61615E;*/
+  border : 2px solid #61615e;
+  border-left-color : transparent;
+  border-right-color : transparent;
+  border-radius : 50%;
+  animation : spin 2s infinite;
+  -webkit-animation : spin 2s infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {-webkit-transform : rotate(0deg);}
+  50% {-webkit-transform : rotate(360deg);}
+  100% {-webkit-transform : rotate(0deg);}
+}
+
+@keyframes spin {
+  0% {transform : rotate(0deg);}
+  50% {transform : rotate(360deg);}
+  100% {transform : rotate(0deg);}
+}
+/****FIN SPINNER****/

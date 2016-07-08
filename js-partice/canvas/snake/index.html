@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title></title>
+        <style media="screen">
+            * { margin: 0; padding: 0; }
+            canvas { box-shadow: 0 0 50px black; display: block; margin: 120px auto 0; }
+            #score { position: fixed; left: 0; top: 0; width: 100%; height: 80px; font-size: 80px; text-align: center; background-color: cyan; line-height: 80px;}
+        </style>
+    </head>
+    <body>
+        <div id="score">3</div>
+        <canvas id="canvas" width="500" height="500">
+            您的浏览器不支持cnavas
+        </canvas>
+
+    </body>
+    <script src="common.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+        // 获取canvas以及上下文对象
+        var score = document.getElementById("score");
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext('2d');
+        var canvasWidth = canvas.width,
+            canvasHeight = canvas.height;
+
+        // 创建蛇对象
+        var snake = {
+            w: 50,
+            h: 50,
+            x: -50,
+            y: 0,
+            headColor: "#fcc",
+            bodyColor: "#ccc",
+            length: 3,
+
+            // 代表蛇的路径
+            positions: [],
+
+            // 移动的方向
+            direction: "right",
+
+            // 蛇的位置
+            setPosition: function () {
+                // 保存当前位置
+                this.positions.push({ x: this.x, y: this.y, w: this.w, h: this.h});
+                // 删除数组第一个的位置
+                if (this.positions.length > this.length) {
+                    this.positions.shift();
+                }
+            },
+
+            // 绘制
+            draw: function () {
+                // 设置位置
+                this.setPosition();
+
+                // 填充颜色
+                ctx.fillStyle = this.bodyColor;
+                // 绘制蛇身体
+                for (var i = 0; i < this.positions.length; i++) {
+                    var item = this.positions[i];
+                    ctx.fillRect(item.x, item.y, this.w, this.h);
+                }
+                // 绘制蛇头
+                ctx.fillStyle = this.headColor;
+                ctx.fillRect(this.x, this.y, this.w, this.h);
+            },
+
+            // 移动
+            move: function () {
+                switch (this.direction) {
+                    case "right":
+                        this.x += this.w;
+                        break;
+                    case "left":
+                        this.x -= this.w;
+                        break;
+                    case "top":
+                        this.y -= this.h;
+                        break;
+                    case "bottom":
+                        this.y += this.h;
+                        break;
+                }
+                this.isStrikeWall();
+            },
+
+            // 判断是否撞墙
+            isStrikeWall: function () {
+                return (this.x > canvasWidth - this.w || this.x < 0 || this.y < 0 || this.y > canvasHeight - this.h);
+            }
+        };
+
+
+
+        // 给doucment绑定键盘事件
+        document.onkeydown = function (e) {
+            var ev = e || window.event;
+            switch (ev.keyCode) {
+                case 37: // left
+                    (snake.direction != "right") && (snake.direction = "left");
+                    break;
+                case 38: // top
+                    (snake.direction != "bottom") && (snake.direction = "top");
+                    break;
+                case 39: // right
+                    (snake.direction != "left") && (snake.direction = "right");
+                    break;
+                case 40: // bottom
+                    (snake.direction != "top") && (snake.direction = "bottom");
+                    break;
+            }
+        }
+
+
+        // 碰撞函数
+        function collide(obj1, obj2) {
+            return (obj1.x == obj2.x && obj1.y == obj2.y);
+        }
+
+        // 食物构造函数
+        function Food() {
+            this.color = "red";
+            this.w = snake.w;
+            this.h = snake.h;
+
+            // 随机食物出来
+            var _this = this;
+            function randomPosition() {
+                // 死循环进行随机
+                var flag = false;
+                while (true) {
+                    // 随机食物的x和y
+                    _this.x = random(0, canvasWidth / _this.w - 1) * _this.w;
+                    _this.y = random(0, canvasHeight / _this.h - 1) * _this.h;
+
+                    // 和蛇进行循环判断
+                    for (var i = 0; i < snake.positions.length; i++) {
+                        flag = collide(_this, snake.positions[i]);
+                        if (flag) {
+                            break;
+                        }
+                    }
+                    // 如果没有重叠的，那就跳出循环
+                    if (flag == false) {
+                        break;
+                    }
+                }
+            }
+            randomPosition();
+
+            this.draw = function () {
+                // 绘制
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.w, this.h);
+            };
+        }
+        // 创建一个食物
+        var food = new Food();
+
+        // 蛇头与食物碰撞
+        snake.eatFood = function () {
+            // 如果吃到了食物
+            if (this.x == food.x && this.y == food.y) {
+                // 创建新的食物
+                food = new Food();
+                // 增加自身的长度
+                snake.length++;
+                // 显示内容
+                score.innerHTML = snake.length;
+            }
+        };
+
+        // 蛇头与蛇身体碰撞
+        snake.strikeSelf = function () {
+            var res = false;
+            for (var i = 0; i < this.positions.length - 1 - 1; i++) {
+                // 自己撞到自己，死亡
+                res = (this.x == this.positions[i].x && this.y == this.positions[i].y);
+                if (res == true) {
+                    break;
+                }
+            }
+            return res;
+        }
+
+
+        // 游戏循环
+        var raf; // requestAniamtionFrame返回值
+        var frameNum = 0;
+        function gameloop() {
+            raf = window.requestAnimationFrame(gameloop);
+            frameNum++;
+
+            // 每隔25帧进行一次动画
+            if (frameNum % 20 == 0) {
+                // 先移动
+                snake.move();
+                // 进行吃食物
+                snake.eatFood();
+
+                // 判断是否撞上
+                if (snake.isStrikeWall()) { // 游戏结束
+                    gameover();
+                    return;
+                }
+                // 撞自己
+                if (snake.strikeSelf()) {
+                    gameover();
+                    return;
+                }
+
+                // 清除旧的内容
+                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                // 绘制新的内容
+                food.draw();
+                snake.draw();
+
+            }
+        }
+        gameloop();
+
+
+        // 游戏结束调用
+        function gameover() {
+            alert('游戏结束');
+            window.cancelAnimationFrame(raf);
+        }
+
+    </script>
+</html>

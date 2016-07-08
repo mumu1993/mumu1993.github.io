@@ -1,0 +1,309 @@
+.portfolio-item{
+	padding: 0 !important;
+    text-align: left;
+	overflow: hidden;
+	display: none;
+}
+.portfolio-item figure {
+    overflow: hidden;
+}
+.portfolio-item figure img {
+    width: 100%;
+	transition: transform 4s;
+	-webkit-transition: transform 4s;
+	-moz-transition: transform 4s;
+	-ms-transition: transform 4s;
+	-o-transition: transform 4s;
+}
+.portfolio-item figure:hover img{
+    transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+}
+.portfolio-item figcaption{
+    position: absolute;
+    padding: 20px;
+    background: #2c3f52;
+	height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+	-webkit-transition: transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: transform 0.4s, opacity 0.1s 0.3s;
+	-ms-transition: transform 0.4s, opacity 0.1s 0.3s;
+	-o-transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+.portfolio-item figure:hover figcaption{
+    opacity: 0.8;
+    transition: transform 0.4s, opacity 0.1s;
+	-webkit-transition: transform 0.4s, opacity 0.1s;
+	-moz-transition: transform 0.4s, opacity 0.1s;
+	-ms-transition: transform 0.4s, opacity 0.1s;
+	-o-transition: transform 0.4s, opacity 0.1s;
+}
+
+.portfolio-item figcaption .heading, .portfolio-item figcaption .social, .portfolio-item figcaption .view{
+	display: none;
+	color: #F8F8F8;
+}
+.portfolio-item:hover figcaption .heading, .portfolio-item:hover figcaption .social, .portfolio-item:hover figcaption .view{
+	display: inherit;
+}
+.portfolio-item figcaption .view{
+	padding: 10px 14px;
+}
+.portfolio-item figure:hover .view:hover{
+	color: #222;
+}
+.portfolio-item figure div.buttons{
+	display: inline-block;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+}
+
+.portfolio-item-filter{
+	color: #F8F8F8;
+	margin-bottom: 15px;
+}
+
+/**
+ *  Directions
+ */
+/**
+ * Up
+ */
+.portfolio-item:not([class*="overlay"]) figcaption, .portfolio-item.overlay-up figcaption{
+    left: 0;
+    top: auto;
+    bottom: 0;
+    transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+}
+.portfolio-item:not([class*="overlay"]) figure:hover figcaption, .portfolio-item.overlay-up figure:hover figcaption{
+    transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+}
+/**
+ * down
+ */
+.portfolio-item.overlay-down figcaption{
+	left: 0;
+    top: auto;
+    bottom: 100%;
+	transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+}
+.portfolio-item.overlay-down figure:hover figcaption{
+	transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
+}
+
+/**
+ * Left
+ */
+
+.portfolio-item.overlay-left figcaption{
+	right: 0;
+	left: auto;
+    top: 0;
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+}
+.portfolio-item.overlay-left figure:hover figcaption{
+	transform: translateX(0px);
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+}
+
+/**
+ * Right
+ */
+
+.portfolio-item.overlay-right figcaption{
+	right: 100%;
+	left: auto;
+    top: 0;
+	transform: translateX(0px);
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-ms-transform: translateX(0px);
+	-o-transform: translateX(0px);
+}
+.portfolio-item.overlay-right figure:hover figcaption{
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+}
+
+/**
+ * Up-Right
+ */
+
+.portfolio-item.overlay-up-right figcaption{
+	right: 100%;
+	left: auto;
+    top: auto;
+	bottom: 0;
+	transform: translate(0px, 100%);
+	-webkit-transform: translate(0px, 100%);
+	-moz-transform: translate(0px, 100%);
+	-ms-transform: translate(0px, 100%);
+	-o-transform: translate(0px, 100%);
+}
+.portfolio-item.overlay-up-right figure:hover figcaption{	
+	transform: translate(100%, 0px);
+	-webkit-transform: translate(100%, 0px);
+	-moz-transform: translate(100%, 0px);
+	-ms-transform: translate(100%, 0px);
+	-o-transform: translate(100%, 0px);
+}
+
+/**
+ * Down-left
+ */
+
+.portfolio-item.overlay-down-left figcaption{
+	right: 0;
+	left: auto;
+    top: auto;
+	bottom: 100%;
+	transform: translate(100%, 0px);
+	-webkit-transform: translate(100%, 0px);
+	-moz-transform: translate(100%, 0px);
+	-ms-transform: translate(100%, 0px);
+	-o-transform: translate(100%, 0px);
+}
+.portfolio-item.overlay-down-left figure:hover figcaption{	
+	transform: translate(0px, 100%);
+	-webkit-transform: translate(0px, 100%);
+	-moz-transform: translate(0px, 100%);
+	-ms-transform: translate(0px, 100%);
+	-o-transform: translate(0px, 100%);
+}
+
+/**
+ * Down-right
+ */
+.portfolio-item.overlay-down-right figcaption{
+	right: 100%;
+	left: auto;
+    top: auto;
+	bottom: 100%;
+	transform: translate(0px, 0px);
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	-o-transform: translate(0px, 0px);
+}
+.portfolio-item.overlay-down-right figure:hover figcaption{	
+	transform: translate(100%, 100%);
+	-webkit-transform: translate(100%, 100%);
+	-moz-transform: translate(100%, 100%);
+	-ms-transform: translate(100%, 100%);
+	-o-transform: translate(100%, 100%);
+}
+
+
+/**
+ * Up-Left
+ */
+
+.portfolio-item.overlay-up-left figcaption{
+	right: 0;
+	left: auto;
+    top: auto;
+	bottom: 0;
+	transform: translate(100%, 100%);
+	-webkit-transform: translate(100%, 100%);
+	-moz-transform: translate(100%, 100%);
+	-ms-transform: translate(100%, 100%);
+	-o-transform: translate(100%, 100%);
+}
+.portfolio-item.overlay-up-left figure:hover figcaption{	
+	transform: translate(0px, 0px);
+	-webkit-transform: translate(0px, 0px);
+	-moz-transform: translate(0px, 0px);
+	-ms-transform: translate(0px, 0px);
+	-o-transform: translate(0px, 0px);
+}
+
+/**
+ * Zoom In
+ */
+
+.portfolio-item.overlay-zoom-in figcaption{
+	right: 0;
+	left: auto;
+    top: 0;
+	bottom: auto;
+	transform: scale(0.6);
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	-ms-transform: scale(0.6);
+	-o-transform: scale(0.6);
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition: transform 0.4s, opacity 0.4s;
+	-moz-transition: transform 0.4s, opacity 0.4s;
+	-ms-transition: transform 0.4s, opacity 0.4s;
+	-o-transition: transform 0.4s, opacity 0.4s;
+}
+.portfolio-item.overlay-zoom-in figure:hover figcaption{	
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+}
+
+/**
+ * Zoom Out
+ */
+
+.portfolio-item.overlay-zoom-out figcaption{
+	right: 0;
+	left: auto;
+    top: 0;
+	bottom: auto;
+	transform: scale(5);
+	-webkit-transform: scale(5);
+	-moz-transform: scale(5);
+	-ms-transform: scale(5);
+	-o-transform: scale(5);
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition: transform 0.4s, opacity 0.4s;
+	-moz-transition: transform 0.4s, opacity 0.4s;
+	-ms-transition: transform 0.4s, opacity 0.4s;
+	-o-transition: transform 0.4s, opacity 0.4s;
+}
+.portfolio-item.overlay-zoom-out figure:hover figcaption{	
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+}

@@ -1,0 +1,82 @@
+/**
+ * Base color rgb(80, 208, 203)
+ */
+
+
+/**
+ *
+ *			Basic Styles and Settings
+ *
+ */
+
+.color-inverse{
+	color: #E0FF00 !important;
+}
+.color{
+	color: rgb(80, 208, 203) !important;
+}
+.bg-color{
+	background-color: #F8F8F8 !important;
+}
+
+/**
+ *	Headings
+ */
+
+.heading:first-letter{
+	color: rgb(80, 208, 203);
+}
+.big-letter-bg{
+	color: #fff;
+	padding: 7px 0;
+	background: rgb(80, 208, 203);
+	margin: 4px 10px 0 0;
+}
+/**
+ *	Underlines
+ */
+
+.ul span:not(.fa){
+	display: block;
+	width: 100px;
+	height: 3px;
+	background-color: rgb(80, 208, 203);
+}
+
+
+/*==============================================
+	Single Portfolio Styles
+===============================================*/
+
+.port-showcase .head-content .btn:hover, .port-showcase .head-content .btn:focus, .port-showcase .head-content .btn:active{
+	color: rgb(80, 208, 203);
+	outline-color: rgb(80, 208, 203);
+}
+.navigator:hover span{
+	color: rgb(80, 208, 203);
+	text-decoration: none;
+}
+.navigator a:hover{
+	text-decoration: none;
+}
+.counter-item .fa{
+	text-shadow: 3px 2px rgb(80, 208, 203);
+}
+.port-contact input:not(.btn):focus, .port-contact textarea:not(.btn):focus{
+	border-color: rgb(80, 208, 203);
+}
+
+/**
+ * Loader
+ */
+
+.pace {
+	border: 0px solid rgb(80, 208, 203) !important;
+}
+.pace .pace-activity {
+	background: rgb(80, 208, 203) !important;
+}
+.pace .pace-progress {
+	background: rgb(80, 208, 203) !important;
+  	color: rgb(80, 208, 203) !important;
+}

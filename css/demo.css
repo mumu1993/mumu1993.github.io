@@ -1,0 +1,85 @@
+/**
+ * 
+ *			Classes and stylesonly for demo. (Please remove this file in original project :) )
+ *
+ */
+
+section.demo{
+	width: 250px;
+	left:-250px;
+	z-index: 1031;
+	height: 100%;
+}
+.demo > .container, .demo > .container > .row{
+	top: 0;
+	width: 250px;
+	right: 100%;
+	z-index: 10;
+	height: 100%;
+}
+.demo .handle, .demo .styler{
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.8);
+	border: none;
+	color: #fff;
+	font-style: normal;
+}
+.styler::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+.styler::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+.styler::-webkit-scrollbar-thumb {
+   background-color: rgba(80, 80, 80, 0.8); 
+}
+.styler .heading:first-letter{
+	color: #fff;
+}
+.demo .styler .close{
+	font-size: 25px;
+}
+.demo .handle{
+	position: absolute;
+	top: 75px;
+	z-index: -1;
+	border-top-right-radius: 45%;
+	border-bottom-right-radius: 45%;
+}
+.demo .handle > button{
+	margin-left: 250px;
+	border-top-right-radius: 45%;
+	border-bottom-right-radius: 45%;
+}
+.demo .handle:hover + .styler, .demo .handle:focus + .styler, .demo .handle:active + .styler, .styler:hover, .styler:active, .styler:active {
+	margin-left: 250px;
+}
+.demo .styler{
+	height: 100%;
+	overflow: auto;
+	width: 250px;
+	-webkit-transition: margin-left 0.5s;
+  	-moz-transition: margin-left 0.5s;
+  	-ms-transition: margin-left 0.5s;
+  	 transition: margin-left 0.5s;
+}
+.styler .heading{
+	margin-left: 0px;
+}
+.styler .heading + .ul{
+	margin-left: 0px;
+}
+.styler .ul{
+	margin-bottom: 10px;
+}
+.styler [data-bpc-class], .styler [data-r-theme]{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 4px;
+	margin-right: 5px;
+	box-shadow: 0px 0px 2px #ddd;
+	cursor: pointer;
+}

@@ -1,0 +1,85 @@
+html,body{
+	max-width: 100%;
+	max-height: 100%;
+	height: 100%;
+	background-image: url('../../img/backgrounds/patterns/noisy.png');
+	background-repeat: repeat;
+	background-size: initial;
+}
+.user-window{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.user-form{
+	border: none;
+	background-color: rgba(237, 237, 237, 1);
+	border-radius: 0px;
+	box-shadow: 5px 5px 10px #222;
+	padding: 0px !important;
+}
+.login .user-form, .signup .user-form{
+	box-shadow: none;
+	border: 2px rgba(237, 237, 237, 1) solid;
+}
+.login-signup .signup{
+	border-left: 1px #F8F8F8 solid;
+}
+@media(min-width: 520px){
+	.user-form.mid{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	.user-form.cen{
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+}
+@media(max-width: 520px){
+	.user-form.mid{
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
+.user-form .logo{
+	padding: 10px;
+	border-radius: 0px;
+}
+.user-form .logo h3{
+	font-size: 30px;
+	font-weight: bold;	
+}
+.user-form .form{
+	padding: 25px;
+	border-radius: 0px;
+}
+.user-form .form-control:focus{
+	box-shadow: none;
+}
+.user-form .btn{
+	margin-top: 10px;
+}
+.user-form .btn  + .btn{
+	margin-left: 10px;
+}
+.user-form .input-group-addon{
+	border-radius: 0px;
+}
+.user-form label{
+	margin-top: 7px;
+}

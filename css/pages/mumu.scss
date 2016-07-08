@@ -1,0 +1,36 @@
+@mixin trans {
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+.skill_name {
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-bottom: 10px solid black;
+        position: relative;
+        margin: 0px auto;
+        display: block;
+        @include trans;
+        transform-origin: center 75%;
+    }
+}
+.trans {
+    &:after {
+        -webkit-transform: rotateZ(180deg);
+        -moz-transform: rotateZ(180deg);
+        -ms-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+}
+#css_circle{
+    background: url(../../img/skills/css.png);
+}
+#js_circle{
+    background: url(../../img/skills/js.png);
+}

@@ -136,3 +136,6 @@ $(".dom").click(function(){
 $(".js").click(function(){
 	window.open("https://mumu1993.github.io/js-partice/")
 })
+$(".message").click(function(){
+	alert("正在建设中...请耐心等候")
+})

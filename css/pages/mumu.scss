@@ -62,3 +62,25 @@
     color: #666;
     }
 }
+.img-head{
+    background: url(../../img/avatars/2.pic_hd.jpg);
+    background-size: 100% 100%;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transition: all linear .3s;
+//  animation: sign 5s ease-in-out infinite;
+    &:hover{
+      background: url(../../img/avatars/4.pic_hd.jpg);
+      background-size: 100% 100%;
+    }
+}
+//@-webkit-keyframes sign{
+//  0% {
+//      background-size:100% 100%;
+//  }
+//  100% {
+//      background-size:110% 110%;
+//  }
+//}

@@ -50,4 +50,16 @@
     font-size: 12px;
     color: #666; }
 
+.img-head {
+  background: url(../../img/avatars/2.pic_hd.jpg);
+  background-size: 100% 100%;
+  -webkit-transition: all linear .3s;
+  -moz-transition: all linear .3s;
+  -ms-transition: all linear .3s;
+  -o-transition: all linear .3s;
+  transition: all linear .3s; }
+  .img-head:hover {
+    background: url(../../img/avatars/4.pic_hd.jpg);
+    background-size: 100% 100%; }
+
 /*# sourceMappingURL=mumu.css.map */

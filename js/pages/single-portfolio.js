@@ -139,3 +139,6 @@ $(".js").click(function(){
 $(".message").click(function(){
 	alert("正在建设中...请耐心等候")
 })
+$(".download").click(function(){
+	alert("正在建设中...请耐心等候")
+})

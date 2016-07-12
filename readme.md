@@ -1,7 +1,7 @@
-##个人主页
-* -dom:dom练习
-* -js-partice:js练习
-* -wechat:微信项目
+##CV of Tianrui Mu
+* -dom:dom pratice
+* -js-partice:js pratice
+* -wechat:wechat project
 
 
 ##License

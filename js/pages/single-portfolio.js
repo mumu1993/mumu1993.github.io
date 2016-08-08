@@ -107,9 +107,8 @@ $(document).ready(function() {
 		window.open("https://mumu1993.github.io/js-partice/")
 	})
 	$(".message").click(function() {
-		alert("正在建设中...请耐心等候")
+		alert("请在微信客户端搜索'青年聚合'公众号")
 	})
 	$(".download").click(function() {
-		alert("正在建设中...请耐心等候")
 	})
 });

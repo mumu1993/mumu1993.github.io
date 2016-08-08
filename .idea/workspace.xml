@@ -2,8 +2,205 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="96f856d5-391e-4fc7-b6c9-2cc049ad9b05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/audio/bg.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/audio/catch.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/audio/shot.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1189_1469874035.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1262_1469864473.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1348_1469862151.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1462_1469850993.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1500_1469864466.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1590_1469872613.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1703_1470135287.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1745_1469864469.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1873_1469852152.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/1889_1469874035.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2052_1470034626.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2063_1469852152.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2163_1469875273.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2223_1470227654.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2504_1469864471.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2549_1469864467.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2678_1469864468.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2855_1469864466.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2875_1470309282.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/2992_1469874037.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/3066_1469933883.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/3110_1469864467.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/312_1470135287.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/3164_1469864473.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/3305_1469864468.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/3602_1469864469.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/3659_1469864467.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/3680_1469864471.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/3714_1469933883.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/3758_1469874034.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4148_1470245911.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4278_1470294636.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4333_1470033329.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4584_1469854201.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4688_1469873029.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4737_1469864474.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4743_1470034637.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4813_1469874038.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4872_1469862113.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4902_1470296765.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/4917_1470034639.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5023_1470294762.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5113_1469864472.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5236_1469873029.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5264_1469864467.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5371_1469873030.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5458_1469874033.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5559_1469935794.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5670_1469873029.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5705_1469874037.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5731_1470034636.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/5780_1469786148.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/6186_1469874036.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/6224_1469872611.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/6404_1469864472.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/6434_1469864468.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/6467_1469874036.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/6552_1470034645.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/6883_1469876260.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/7078_1470295066.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/7111_1469872612.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/7496_1469864468.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/7521_1470034626.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/7635_1470034633.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/7929_1469872611.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/8054_1470201971.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/8156_1470233748.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/8617_1470034647.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/8628_1469864466.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/8826_1469873029.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/8912_1469873030.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/9016_1470034641.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/925_1470294106.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/9410_1469872611.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/9498_1469937439.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/9798_1469876258.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/9805_1470034631.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/9826_1469933883.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/9900_1470229525.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/9935_1469874034.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/images/9986_1470034643.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/bedroom/00.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/bedroom/01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/bedroom/02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/bedroom/03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/bedroom/04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/bedroom/05.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/coffee/00.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/coffee/01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/coffee/02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/coffee/03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/coffee/04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/coffee/05.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/flash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/hand.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/livingroom/00.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/livingroom/01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/livingroom/02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/livingroom/03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/livingroom/04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/livingroom/05.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/maskImg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/move.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/cui.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/gao.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/huang2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/li.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/liu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/liu2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/song.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/tong.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/wu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/ns/xiaos.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/photo/photo-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/share.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/street/00.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/street/01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/street/02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/street/03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/street/04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/img/street/05.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/sound/catch.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/sound/pocketbg.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/sound/throw.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/bedroom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/coffee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/config.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/config/app.config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/config/db.config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/controllers/actions.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/controllers/callback.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/controllers/ctcallback.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/controllers/debug.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/controllers/main.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/controllers/statistics.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/css/main79.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/css/main80.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/css/main81.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/css/main82.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/css/main83.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/Autoloader.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/config/core.config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/init.inc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/Cache.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/Cdn.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/Db.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/Icon.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/Lock.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/Mysql.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/SafeHtml.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/Thumbnail.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/Url.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/Weibo.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/XML/HTMLSax3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/XML/HTMLSax3/Decorators.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/XML/HTMLSax3/States.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/engine/lib/core.function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/init.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/3dhelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/css3d.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/css3d.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/exif.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/hammer.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/jQuery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/json2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/livingroom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/lrz.mobile.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/js/three.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/lib/BaseController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/lib/MC.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/lib/MemcacheSASL.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/lib/OAuthHelperV3.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/lib/Qiniu.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/lib/app.function.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/livingroom.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/sql.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/street.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/themes/default/layout.tpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/themes/default/main.tpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/themes/statistics/layout.tpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/themes/statistics/login.tpl.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wechat/pocket-man/themes/statistics/statistics.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wechat/index.html" afterPath="$PROJECT_DIR$/wechat/index.html" />
     </list>
     <ignored path="mumu1993.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +223,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2218">
-              <caret line="211" column="153" selection-start-line="211" selection-start-column="153" selection-end-line="211" selection-end-column="153" />
+            <state relative-caret-position="302">
+              <caret line="316" column="96" selection-start-line="316" selection-start-column="96" selection-end-line="316" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wechat/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="57" column="68" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -45,6 +252,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/wechat/index.html" />
       </list>
     </option>
   </component>
@@ -103,6 +311,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mumu1993.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mumu1993.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -111,6 +333,61 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wechat/pocket-man" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -122,12 +399,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1470630937604</updated>
-      <workItem from="1470630940469" duration="503000" />
+      <workItem from="1470630940469" duration="743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503000" />
+    <option name="totallyTimeSpent" value="743000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="6" />
@@ -137,18 +414,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -169,8 +446,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2218">
-          <caret line="211" column="153" selection-start-line="211" selection-start-column="153" selection-end-line="211" selection-end-column="153" />
+        <state relative-caret-position="302">
+          <caret line="316" column="96" selection-start-line="316" selection-start-column="96" selection-end-line="316" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wechat/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="57" column="68" selection-start-line="57" selection-start-column="68" selection-end-line="57" selection-end-column="68" />
           <folding />
         </state>
       </provider>

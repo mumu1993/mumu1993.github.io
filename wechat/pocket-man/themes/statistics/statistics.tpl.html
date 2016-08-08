@@ -1,0 +1,100 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">统计</a>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="alert alert-success" role="alert">
+	来源为 分发连接 http://<?=$_SERVER['HTTP_HOST']?>/?src=xxx xxx为用户来源
+</div>
+<br>
+<center>
+	<!-- <a href="<?=Url::make('method=export')?>" class="btn btn-success">导出用户数据</a> -->
+</center>
+<br>
+<table class="table" class="table table-striped">
+    <thead>
+        <tr>
+            <th>日期</th>
+            <th>来源</th>
+            <th>PV</th>
+            <th>UV</th>
+            <th>分享好友次数</th>
+            <th>分享好友人数</th>
+            <th>分享朋友圈次数</th>
+            <th>分享朋友圈人数</th>
+            <th>来自好友次数</th>
+            <th>来自好友人数</th>
+            <th>来自群次数</th>
+            <th>来自群人数</th>
+            <th>来自朋友圈次数</th>
+            <th>来自朋友圈人数</th>
+            <!-- <th>参与次数</th>
+            <th>参与人数</th> -->
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach ( $list  as $key => $value): ?>
+    <?php
+    	$all['pv'] += $value['pv'];
+    	$all['uv'] += $value['uv'];
+    	$all['share_friend_pv'] += $value['share_friend_pv'];
+    	$all['share_friend_uv'] += $value['share_friend_uv'];
+    	$all['share_timeline_pv'] += $value['share_timeline_pv'];
+    	$all['share_timeline_uv'] += $value['share_timeline_uv'];
+        $all['singlemessage_pv'] += $value['singlemessage_pv'];
+        $all['singlemessage_uv'] += $value['singlemessage_uv'];
+        $all['groupmessage_pv'] += $value['groupmessage_pv'];
+        $all['groupmessage_uv'] += $value['groupmessage_uv'];
+        $all['timeline_pv'] += $value['timeline_pv'];
+        $all['timeline_uv'] += $value['timeline_uv'];
+        $all['start_pv'] += $value['start_pv'];
+    	$all['start_uv'] += $value['start_uv'];
+    ?>
+    <?php endforeach; ?>
+   		<tr>
+    		<td>总计</td>
+    		<td>－－</td>
+    		<td><?=$all['pv']?></td>
+    		<td><?=$all['uv']?></td>
+    		<td><?=$all['share_friend_pv']?></td>
+    		<td><?=$all['share_friend_uv']?></td>
+    		<td><?=$all['share_timeline_pv']?></td>
+    		<td><?=$all['share_timeline_uv']?></td>
+            <td><?=$all['singlemessage_pv']?></td>
+            <td><?=$all['singlemessage_uv']?></td>
+            <td><?=$all['groupmessage_pv']?></td>
+            <td><?=$all['groupmessage_uv']?></td>
+            <td><?=$all['timeline_pv']?></td>
+            <td><?=$all['timeline_uv']?></td>
+    		<!-- <td><?=$all['start_pv']?></td>
+    		<td><?=$all['start_uv']?></td> -->
+    	</tr>
+    
+     <?php foreach ( $list  as $key => $value): ?>
+    	<tr>
+    		<td><?=$value['date']?></td>
+    		<td><?=$value['from']?></td>
+    		<td><?=$value['pv']?></td>
+    		<td><?=$value['uv']?></td>
+    		<td><?=$value['share_friend_pv']?></td>
+    		<td><?=$value['share_friend_uv']?></td>
+    		<td><?=$value['share_timeline_pv']?></td>
+    		<td><?=$value['share_timeline_uv']?></td>
+            <td><?=$value['singlemessage_pv']?></td>
+            <td><?=$value['singlemessage_uv']?></td>
+            <td><?=$value['groupmessage_pv']?></td>
+            <td><?=$value['groupmessage_uv']?></td>
+            <td><?=$value['timeline_pv']?></td>
+            <td><?=$value['timeline_uv']?></td>
+    		<!-- <td><?=$value['start_pv']?></td>
+    		<td><?=$value['start_uv']?></td> -->
+    	</tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>

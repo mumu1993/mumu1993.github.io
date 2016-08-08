@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<script>
+  if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+    var version = parseFloat(RegExp.$1);
+    if (version > 2.3) {
+      var phoneScale = parseInt(window.screen.width) / 640;
+      document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+    } else {
+      document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+    }
+  } else {
+    document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+  }
+</script>
+<title></title>
+<link rel="stylesheet" type="text/css" href="/css/reset.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/core.css" media="all" />
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/core.js"></script>
+</head>
+<body class="">
+
+<div id="wrapper">
+ <?php
+if(is_file(ROOT.'themes/default/'. $__showPage .'.tpl.html'))
+		include(  ROOT.'themes/default/'. $__showPage .'.tpl.html' );
+	else
+		echo "<div>can't find  $__showPage html file</div>";
+?>
+
+<?php if(c('custom')):?>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+window.wx && wx.config({
+    debug: false,
+    appId: '<?=c('ct_appid')?>',
+    timestamp: '<?=$weixinJsApiInfo['timestamp']?>',
+    nonceStr: '<?=$weixinJsApiInfo['nonceStr']?>',
+    signature: '<?=$weixinJsApiInfo['signature']?>',
+    jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'hideOptionMenu', 'showOptionMenu']
+});
+</script>
+<?php else:?>
+<script type="text/javascript" src="http://api2.izhida.cn/wechat_js_config?app_id=wx2fa55d29f3666fb3&v=1.2.0"></script>
+<?php endif;?>
+
+<script>
+var startGameBack = '<?=Url::make('class=statistics&method=startGame')?>';
+var shareFriendCallBack = '<?=Url::make('class=statistics&method=shareFriendSuccess')?>';
+var shareTimelineCallBack = '<?=Url::make('class=statistics&method=shareTimelineSuccess')?>';
+var wxFriendData = {
+    'link': "http://<?=$_SERVER['HTTP_HOST']?>/?src=<?=$_SESSION['from']?>",
+    'imgUrl':  'http://<?=$_SERVER['HTTP_HOST']?>/img/share.jpg',
+    'title': 'share_title',
+    'desc': 'share_desc',
+    'success': function () {
+        $.post( shareFriendCallBack );
+    }
+};
+var wxTimelineData = {
+    'link': "http://<?=$_SERVER['HTTP_HOST']?>/?src=<?=$_SESSION['from']?>",
+    'imgUrl':  'http://<?=$_SERVER['HTTP_HOST']?>/img/share.jpg',
+    'title': 'share_tite',
+    'success': function () {
+        $.post( shareTimelineCallBack );
+    }
+};
+window.wx && wx.ready(function () {
+    wx.onMenuShareAppMessage(wxFriendData);
+    wx.onMenuShareTimeline(wxTimelineData);
+});
+</script>
+</div>
+<img style="width:0;height:0;opacity:0;position: absolute;bottom:0" src="<?=Url::make('class=statistics&method=statistics')?>" alt="">
+</body>
+</html>

@@ -1,0 +1,33 @@
+<style>
+.form-signin{
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+	margin-top:30px;
+}
+</style>
+<div class="container">
+
+  <form class="form-signin" role="form">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <input type="text" name="email" class="form-control" placeholder="Email address" required autofocus>
+    <input type="password" name="password" class="form-control" placeholder="Password" required>
+    <br />
+    <button class="btn btn-lg btn-primary btn-block sub-btn" type="button">Sign in</button>
+  </form>
+
+</div>
+<script>
+$(function(){
+	$('.sub-btn').on('click' , function(){
+		var data = $('form').serialize();
+		$.post( '<?=Url::make('class=statistics&method=loginSubmit')?>' , data , function(res){
+			if( res ){
+				alert(res);
+			}else{
+				window.location.reload();
+			}
+		} );
+	} );
+});
+</script>
